@@ -278,7 +278,9 @@ export function createAtlasMap(o: AtlasOpts): AtlasMap {
     } else {
       const icon = placeIcon(s.id);
       icon.setAttribute('transform', 'scale(0.62)');
-      body.append(svg('circle', { r: 11.5, class: 'core' }), icon);
+      // the same waves as the monuments, in the colour of the place's category
+      body.append(svg('circle', { r: 17, class: 'halo' }), svg('circle', { r: 11.5, class: 'ring r1' }), svg('circle', { r: 11.5, class: 'ring r2' }),
+        svg('circle', { r: 11.5, class: 'core' }), icon);
     }
     const off = s.walk ? 21 : 16;
     const label = svg('g', { class: 'plabel' });

@@ -449,10 +449,14 @@ html[lang='ar'] .region { letter-spacing: 0; font-style: normal; }
 .opin.ready .badge { fill: #fff8ec; stroke: var(--o-terra); stroke-width: 2.6; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .45)); }
 .opin.ready .halo { fill: rgba(212, 101, 56, .3); opacity: 0; transition: opacity .3s; }
 .opin.ready.active .halo { opacity: 1; }
-/* the orange waves only round the monument you picked */
-.opin.ready .ring { fill: none; stroke: var(--o-terra); stroke-width: 2; transform-box: fill-box; transform-origin: center; opacity: 0; }
-.opin.ready.active .ring { animation: ring 2.6s ease-out infinite; }
-.opin.ready.active .ring.r2 { animation-delay: 1.3s; }
+/* waves only round the place you picked: orange for a 3D monument, the category's colour for the other places */
+.opin .ring { fill: none; stroke: var(--o-terra); stroke-width: 2; transform-box: fill-box; transform-origin: center; opacity: 0; }
+.opin.spot .ring { stroke: var(--c); }
+.opin.active .ring { animation: ring 2.6s ease-out infinite; }
+.opin.active .ring.r2 { animation-delay: 1.3s; }
+.opin.spot .halo { fill: var(--c); opacity: 0; transition: opacity .3s; }
+.opin.spot.active .halo { opacity: .28; }
+@media (prefers-reduced-motion: reduce) { .opin.active .ring { animation: none; } }
 .opin.ready .plabel rect { fill: var(--o-terra); stroke: none; }
 .opin.ready .plabel text { font-size: 12.5px; font-weight: 700; }
 @keyframes ring { from { transform: scale(.8); opacity: .9; } to { transform: scale(2.4); opacity: 0; } }
