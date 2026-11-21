@@ -386,13 +386,14 @@ export function buildBullaRegia(materials: Materials, site?: SiteDef): Promise<B
   data.areas = (TOWN.areas as Area[]).map((a) => (a.k === 'garden' && /Bulla|بولا/i.test(a.name ?? '') ? { ...a, k: 'archaeology' } : a));
   const hunt = VILLAS[0];
   return buildTerrainTown(materials, site, {
+    houseStyle: 'rural', // src/viewer/house-styles.ts
     data,
     core: 0,
     treeR: 220,
     scrub: 0.7,
     palette: { soil: '#d9c79c', scrub: '#9ea06a' },
     paved: (r) => r.k === 'secondary' || r.k === 'tertiary' || r.s === 'asphalt',
-    houseColors: { walls: ['#e6dccb', '#d9cdb6', '#efe9dc', '#d2c3a6'], roofs: ['#dcd2c0', '#d0c4ac', '#e8e1d2'] },
+    houseColors: { walls: ['#ffffff', '#f7f3ea', '#f1ebdf', '#fbf8f2'], roofs: ['#dcd2c0', '#d0c4ac', '#e8e1d2'] },
     flatten: [{ p: FORUM, pad: 10, level: 'mean' }],
     holes: villaHoles,
     // at the entrance by the museum, looking south over the site

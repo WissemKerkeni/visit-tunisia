@@ -57,7 +57,7 @@ export class Collector {
     for (const name of Object.keys(geo.attributes)) if (!['position', 'normal', 'uv', 'color'].includes(name)) geo.deleteAttribute(name);
     if (!geo.getAttribute('normal')) geo.computeVertexNormals();
     if (!geo.getAttribute('uv')) geo.setAttribute('uv', new THREE.Float32BufferAttribute(new Float32Array(geo.getAttribute('position').count * 2), 2));
-    const colored = mat.startsWith('plaster') || mat.startsWith('roof') || mat.startsWith('whitewash') || mat === 'terrain';
+    const colored = mat.startsWith('plaster') || mat.startsWith('roof') || mat.startsWith('whitewash') || mat.startsWith('wall:') || mat === 'woodwork' || mat === 'terrain';
     if (colored && !geo.getAttribute('color')) {
       const c = new Float32Array(geo.getAttribute('position').count * 3).fill(1);
       geo.setAttribute('color', new THREE.Float32BufferAttribute(c, 3));

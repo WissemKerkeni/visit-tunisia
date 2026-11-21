@@ -447,6 +447,7 @@ export async function buildMatmata(materials: Materials, site: SiteDef): Promise
   LIGHTS = [];
   if (import.meta.env.DEV) (window as unknown as { __matmata: typeof PLAN }).__matmata = PLAN; // for dev captures
   return buildTerrainTown(materials, site, {
+    houseStyle: 'south', // src/viewer/house-styles.ts
     data: TOWN as unknown as TownData,
     core: 0,
     fill: false,
@@ -461,7 +462,7 @@ export async function buildMatmata(materials: Materials, site: SiteDef): Promise
     // the national road is asphalt; village streets and tracks are packed earth
     paved: (r) => r.k === 'primary' || r.k === 'secondary' || r.s === 'asphalt',
     // houses of local stone and cement, some lime-washed
-    houseColors: { walls: ['#d9c7a5', '#cdb894', '#ece4d4', '#c9b391', '#dfd2b8'], roofs: ['#d8c9ad', '#cfbf9f', '#e6dccb'] },
+    houseColors: { walls: ['#ffffff', '#f6efe4', '#efe6d6', '#fbf6ee', '#f2eadc'], roofs: ['#d8c9ad', '#cfbf9f', '#e6dccb'] },
     holes: plan,
     // in the hotel's sunken entrance lane, looking down it to the tunnel
     get spawn() {

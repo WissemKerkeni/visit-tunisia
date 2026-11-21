@@ -559,8 +559,13 @@ export function mountLanding(root: HTMLElement, openSite: (id: string) => void, 
       };
       if (same) return;
       if (!firstRender) window.scrollTo({ top: 0 });
-      const vt = (document as Document & { startViewTransition?: (f: () => void) => unknown }).startViewTransition;
-      if (animate && !firstRender && !reduced && vt) vt.call(document, apply); else apply();
+      type VT = { ready: Promise<void>; finished: Promise<void>; updateCallbackDone: Promise<void> };
+      const vt = (document as Document & { startViewTransition?: (f: () => void) => VT }).startViewTransition;
+      if (animate && !firstRender && !reduced && vt) {
+        // a transition can be skipped (the window resized, another view chosen): the view still changes, so ignore that
+        const tr = vt.call(document, apply);
+        for (const p of [tr.ready, tr.finished, tr.updateCallbackDone]) p.catch(() => {});
+      } else apply();
     }
     function navTo(v: View) {
       setView(v);

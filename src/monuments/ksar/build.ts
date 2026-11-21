@@ -282,6 +282,7 @@ function ksar(k: TownKit) {
 
 export async function buildKsar(materials: Materials, site: SiteDef): Promise<BuildResult> {
   return buildTerrainTown(materials, site, {
+    houseStyle: 'south', // src/viewer/house-styles.ts
     data: TOWN as unknown as TownData,
     core: 0,
     fill: false,
@@ -293,7 +294,7 @@ export async function buildKsar(materials: Materials, site: SiteDef): Promise<Bu
     smooth: 16,
     palette: { soil: '#e6cda3', scrub: '#bcab7a' },
     paved: (r) => r.k === 'tertiary' || r.k === 'secondary' || r.s === 'asphalt',
-    houseColors: { walls: ['#dcc6a0', '#d2b98f', '#e6d7bb', '#cdb089'], roofs: ['#d6c3a2', '#cbb592', '#e0d2b8'] },
+    houseColors: { walls: ['#ffffff', '#f4ecdf', '#eee4d2', '#faf4ea'], roofs: ['#d6c3a2', '#cbb592', '#e0d2b8'] },
     flatten: [{ p: FOOT, pad: 16, level: 'mean' }],
     // outside the open end of the second courtyard, by the café and the car park
     spawn: { x: GATE[0] + 22, z: GATE[1] + 2 },

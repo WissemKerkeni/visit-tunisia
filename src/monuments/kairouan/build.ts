@@ -76,6 +76,7 @@ export function buildKairouan(materials: Materials, site?: SiteDef): Promise<Bui
   const spawn = mq(39, -26), look = mq(14, MID);
   const court = mq(46, MID), chouhada = BAB_CHOUHADA;
   return buildTerrainTown(materials, site, {
+    houseStyle: 'kairouan', // src/viewer/house-styles.ts
     data: TOWN as unknown as TownData,
     core: 0,
     corePoly: MEDINA,

@@ -1,9 +1,12 @@
 import * as THREE from 'three';
+import { HOUSE_STYLES, type HouseStyle } from './house-styles';
 import { weather, type WeatherOpts } from './weathering';
 
 export type MatKey = 'facade' | 'attic' | 'block' | 'plazaBlock' | 'townSteel' | 'rubble' | 'rock' | 'sand' | 'ground' | 'paving' | 'plaster' | 'roof' | 'plasterFar' | 'roofFar'
   | 'asphalt' | 'urban' | 'fields' | 'fence' | 'glass' | 'steel' | 'stage' | 'palmTrunk' | 'palmLeaf'
-  | 'whitewash' | 'whitewashFar' | 'terrain' | 'water';
+  | 'whitewash' | 'whitewashFar' | 'terrain' | 'water' | 'cobbles' | 'woodwork'
+  /** A house wall in a town's style with one joinery colour: wall:<style>:<colour index>, plus :Far for distant houses (no shadows). */
+  | `wall:${string}`;
 
 /** Alpha texture of vertical railing bars (one tile = 0.6 m × 1.52 m; UVs in metres). */
 function fenceTexture() {
@@ -93,66 +96,108 @@ function facadeTexture(anisotropy: number) {
   return t;
 }
 
+/** A darker shade of a colour (for frames and shadows of the joinery). */
+function shade(hex: string, k: number) {
+  const c = new THREE.Color(hex).multiplyScalar(k);
+  return `#${c.getHexString()}`;
+}
+
+/** Where the windows of the house wall are (metres: centre x, sill height, width, height), per window kind. */
+function wallWindows(style: HouseStyle) {
+  if (style.windows === 'small') return { ground: [5.2, 1.5, 0.7, 0.7], up: [[2.0, 4.4, 0.7, 0.75], [7.6, 4.4, 0.7, 0.75]], upMid: [5.2, 4.5, 0.6, 0.6] };
+  return { ground: [5.2, 0.9, 1.1, 1.2], up: [[2.0, 4.1, 0.75, 1.15], [7.6, 4.1, 0.75, 1.15]], upMid: [5.2, 4.0, 0.9, 1.0] };
+}
+
 /**
- * Sidi Bou Said wall, 9 m wide × 9.6 m tall (two storeys and a plain band above, so taller walls and walls
- * below street level stay plain; UVs in metres): lime-washed white, an arched
- * blue door studded with black nails in a carved stone frame, small windows behind bulging blue
- * ironwork cages, and blue-shuttered windows upstairs.
+ * House wall, 9 m wide × 9.6 m tall (two storeys and a plain band above, so taller walls and walls below street
+ * level stay plain; UVs in metres), drawn in a town's style (src/viewer/house-styles.ts) with one joinery colour:
+ * plaster with mottling and a damp plinth; an arched or square door, studded or of planks, in a stone or plaster
+ * surround; windows behind bulging ironwork cages, flat grilles or small wooden screens; shutters upstairs.
  */
-function whitewashTexture(anisotropy: number) {
+function wallTexture(anisotropy: number, style: HouseStyle, joinery: string) {
   const PX = 64, W = 9 * PX, H = Math.round(9.6 * PX);
   const c = document.createElement('canvas');
   c.width = W; c.height = H;
   const g = c.getContext('2d')!;
-  g.fillStyle = '#f7f6f2'; g.fillRect(0, 0, W, H);
+  g.fillStyle = style.base; g.fillRect(0, 0, W, H);
+  const [sr, sg, sb] = style.speck;
   for (let i = 0; i < 4000; i++) {
-    const v = 232 + Math.random() * 23;
-    g.fillStyle = `rgba(${v},${v},${v - 4},0.35)`;
+    const v = (Math.random() - 0.5) * 26;
+    g.fillStyle = `rgba(${sr + v},${sg + v},${sb + v},0.35)`;
     g.fillRect(Math.random() * W, Math.random() * H, 2 + Math.random() * 12, 2 + Math.random() * 8);
   }
   const yOf = (m: number) => H - m * PX;
-  // grey-blue plinth wash and faint damp at the foot of the wall
+  // plinth wash and faint damp at the foot of the wall
   const grad = g.createLinearGradient(0, yOf(0.8), 0, H);
-  grad.addColorStop(0, 'rgba(150,150,140,0)'); grad.addColorStop(1, 'rgba(150,150,140,0.28)');
+  grad.addColorStop(0, 'rgba(120,110,95,0)'); grad.addColorStop(1, `rgba(120,110,95,${style.relief === 'clay' ? 0.22 : 0.28})`);
   g.fillStyle = grad; g.fillRect(0, yOf(0.8), W, 0.8 * PX);
-  const blue = '#1d68b0', blueD = '#14528e';
-  // arched door: stone frame, blue leaf, black studs in patterns
+  const dark = shade(joinery, 0.78);
+  // the door: surround, leaf, studs or planks
   {
-    const x0 = 2.0 * PX, w = 1.15 * PX, top = yOf(2.25), r = w / 2;
-    g.fillStyle = '#e6ddc8'; // carved stone surround
-    g.beginPath(); g.moveTo(x0 - r - 12, yOf(0)); g.lineTo(x0 - r - 12, top + r); g.arc(x0, top + r, r + 12, Math.PI, 0); g.lineTo(x0 + r + 12, yOf(0)); g.fill();
-    g.fillStyle = blue;
-    g.beginPath(); g.moveTo(x0 - r, yOf(0)); g.lineTo(x0 - r, top + r); g.arc(x0, top + r, r, Math.PI, 0); g.lineTo(x0 + r, yOf(0)); g.fill();
-    g.fillStyle = 'rgba(0,0,0,0.25)'; g.fillRect(x0 - 1, top + r * 0.4, 2, yOf(0) - top - r * 0.4);
-    g.fillStyle = '#111';
-    for (let yy = top + r + 10; yy < yOf(0.12); yy += 13) for (let k = -3; k <= 3; k++) { const xx = x0 + k * 9; if (Math.abs(k) === 3 || (Math.round(yy / 13) + k) % 3 === 0) { g.beginPath(); g.arc(xx, yy, 2, 0, Math.PI * 2); g.fill(); } }
-    g.beginPath(); for (let a = 0; a < 7; a++) { g.moveTo(x0 + Math.cos(Math.PI + a * Math.PI / 6) * (r - 8), top + r + Math.sin(Math.PI + a * Math.PI / 6) * (r - 8)); g.arc(x0 + Math.cos(Math.PI + a * Math.PI / 6) * (r - 8), top + r + Math.sin(Math.PI + a * Math.PI / 6) * (r - 8), 2, 0, Math.PI * 2); } g.fill();
+    const x0 = 2.0 * PX, w = (style.door === 'arch' ? 1.15 : 1.05) * PX, top = yOf(style.door === 'arch' ? 2.25 : 2.1), r = w / 2;
+    const leaf = (pad: number) => {
+      g.beginPath();
+      if (style.door === 'arch') { g.moveTo(x0 - r - pad, yOf(0)); g.lineTo(x0 - r - pad, top + r); g.arc(x0, top + r, r + pad, Math.PI, 0); g.lineTo(x0 + r + pad, yOf(0)); }
+      else g.rect(x0 - r - pad, top - pad, w + pad * 2, yOf(0) - top + pad);
+      g.fill();
+    };
+    g.fillStyle = style.frame; leaf(12);
+    g.fillStyle = joinery; leaf(0);
+    g.fillStyle = 'rgba(0,0,0,0.25)'; g.fillRect(x0 - 1, top + (style.door === 'arch' ? r * 0.4 : 4), 2, yOf(0) - top - 4);
+    if (style.studs) {
+      g.fillStyle = '#111';
+      for (let yy = top + r + 10; yy < yOf(0.12); yy += 13) for (let k = -3; k <= 3; k++) { const xx = x0 + k * 9; if (Math.abs(k) === 3 || (Math.round(yy / 13) + k) % 3 === 0) { g.beginPath(); g.arc(xx, yy, 2, 0, Math.PI * 2); g.fill(); } }
+      if (style.door === 'arch') { g.beginPath(); for (let a = 0; a < 7; a++) { const px = x0 + Math.cos(Math.PI + a * Math.PI / 6) * (r - 8), py = top + r + Math.sin(Math.PI + a * Math.PI / 6) * (r - 8); g.moveTo(px, py); g.arc(px, py, 2, 0, Math.PI * 2); } g.fill(); }
+    } else {
+      // planks, a crossbar and a small iron knocker
+      g.fillStyle = 'rgba(0,0,0,0.22)';
+      for (let xx = x0 - r + 9; xx < x0 + r - 3; xx += 11) g.fillRect(xx, top + 4, 2, yOf(0) - top - 6);
+      g.fillStyle = dark; g.fillRect(x0 - r + 3, yOf(1.15), w - 6, 6);
+      g.fillStyle = '#2a2622'; g.beginPath(); g.arc(x0 + r * 0.55, yOf(1.05), 4, 0, Math.PI * 2); g.fill();
+    }
   }
-  // window behind a bulging blue ironwork cage (moucharabieh), ground floor
-  const cage = (cx: number, base: number, w: number, h: number) => {
+  // windows
+  const win = wallWindows(style);
+  const opening = (cx: number, base: number, w: number, h: number) => {
     const x0 = cx * PX - (w * PX) / 2, y0 = yOf(base + h), ww = w * PX, hh = h * PX;
-    g.fillStyle = '#20262c'; g.fillRect(x0 + 6, y0 + 6, ww - 12, hh - 12);
-    g.strokeStyle = blue; g.lineWidth = 3;
-    g.strokeRect(x0, y0, ww, hh);
-    for (let xx = x0 + 10; xx < x0 + ww - 4; xx += 12) { g.beginPath(); g.moveTo(xx, y0); g.lineTo(xx, y0 + hh); g.stroke(); }
-    g.lineWidth = 2;
-    for (let yy = y0 + 14; yy < y0 + hh - 6; yy += 22) for (let xx = x0 + 16; xx < x0 + ww - 8; xx += 24) { g.beginPath(); g.arc(xx, yy, 6, 0, Math.PI * 1.6); g.stroke(); }
-    g.fillStyle = blueD; g.fillRect(x0 - 6, y0 + hh, ww + 12, 7); g.fillRect(x0 - 6, y0 - 6, ww + 12, 6);
+    if (style.windows === 'cages') {
+      g.fillStyle = '#20262c'; g.fillRect(x0 + 6, y0 + 6, ww - 12, hh - 12);
+      g.strokeStyle = joinery; g.lineWidth = 3;
+      g.strokeRect(x0, y0, ww, hh);
+      for (let xx = x0 + 10; xx < x0 + ww - 4; xx += 12) { g.beginPath(); g.moveTo(xx, y0); g.lineTo(xx, y0 + hh); g.stroke(); }
+      g.lineWidth = 2;
+      for (let yy = y0 + 14; yy < y0 + hh - 6; yy += 22) for (let xx = x0 + 16; xx < x0 + ww - 8; xx += 24) { g.beginPath(); g.arc(xx, yy, 6, 0, Math.PI * 1.6); g.stroke(); }
+      g.fillStyle = dark; g.fillRect(x0 - 6, y0 + hh, ww + 12, 7); g.fillRect(x0 - 6, y0 - 6, ww + 12, 6);
+    } else if (style.windows === 'grilles') {
+      g.fillStyle = style.frame; g.fillRect(x0 - 6, y0 - 6, ww + 12, hh + 12);
+      g.fillStyle = '#20262c'; g.fillRect(x0, y0, ww, hh);
+      g.fillStyle = joinery;
+      for (let xx = x0 + 8; xx < x0 + ww - 2; xx += 11) g.fillRect(xx, y0, 3, hh);
+      for (let yy = y0 + hh / 3; yy < y0 + hh - 2; yy += hh / 3) g.fillRect(x0, yy, ww, 3);
+    } else {
+      // small opening with a wooden screen
+      g.fillStyle = style.frame; g.fillRect(x0 - 5, y0 - 5, ww + 10, hh + 10);
+      g.fillStyle = '#1e1a16'; g.fillRect(x0, y0, ww, hh);
+      g.strokeStyle = joinery; g.lineWidth = 3;
+      for (let k = -hh; k < ww; k += 10) { g.beginPath(); g.moveTo(x0 + k, y0); g.lineTo(x0 + k + hh, y0 + hh); g.stroke(); g.beginPath(); g.moveTo(x0 + k + hh, y0); g.lineTo(x0 + k, y0 + hh); g.stroke(); }
+      g.strokeRect(x0, y0, ww, hh);
+    }
   };
-  cage(5.2, 0.9, 1.1, 1.2);
-  // upstairs: shuttered windows and a smaller cage
-  const shutters = (cx: number, base: number) => {
-    const x0 = cx * PX, w = 0.75 * PX, h = 1.15 * PX, y = yOf(base + 1.15);
+  opening(win.ground[0], win.ground[1], win.ground[2], win.ground[3]);
+  // upstairs: shuttered windows (or small screens) and a middle opening
+  const shutters = (cx: number, base: number, w0: number, h0: number) => {
+    if (style.windows === 'small') { opening(cx, base, w0, h0); return; }
+    const x0 = cx * PX, w = w0 * PX, h = h0 * PX, y = yOf(base + h0);
     g.fillStyle = '#2a2a2a'; g.fillRect(x0 - w / 2, y, w, h);
-    g.fillStyle = blue; g.fillRect(x0 - w / 2 - 0.3 * PX, y, 0.3 * PX, h); g.fillRect(x0 + w / 2, y, 0.3 * PX, h);
+    g.fillStyle = joinery; g.fillRect(x0 - w / 2 - 0.3 * PX, y, 0.3 * PX, h); g.fillRect(x0 + w / 2, y, 0.3 * PX, h);
     g.fillStyle = 'rgba(0,0,0,0.25)';
     for (let k = 4; k < h - 2; k += 7) { g.fillRect(x0 - w / 2 - 0.28 * PX, y + k, 0.26 * PX, 2); g.fillRect(x0 + w / 2 + 0.02 * PX, y + k, 0.26 * PX, 2); }
-    g.fillStyle = '#e8e3d6'; g.fillRect(x0 - w / 2 - 0.34 * PX, y + h, w + 0.68 * PX, 5);
+    g.fillStyle = style.frame; g.fillRect(x0 - w / 2 - 0.34 * PX, y + h, w + 0.68 * PX, 5);
   };
-  shutters(2.0, 4.1); shutters(7.6, 4.1);
-  cage(5.2, 4.0, 0.9, 1.0);
-  // small high vent with blue frame
-  g.fillStyle = blue; g.fillRect(7.6 * PX - 14, yOf(2.4), 28, 22); g.fillStyle = '#20262c'; g.fillRect(7.6 * PX - 9, yOf(2.4) + 5, 18, 12);
+  for (const [cx, base, w, h] of win.up) shutters(cx, base, w, h);
+  opening(win.upMid[0], win.upMid[1], win.upMid[2], win.upMid[3]);
+  // small high vent
+  g.fillStyle = joinery; g.fillRect(7.6 * PX - 14, yOf(2.4), 28, 22); g.fillStyle = '#20262c'; g.fillRect(7.6 * PX - 9, yOf(2.4) + 5, 18, 12);
   const t = new THREE.CanvasTexture(c);
   t.colorSpace = THREE.SRGBColorSpace;
   t.wrapS = t.wrapT = THREE.RepeatWrapping;
@@ -161,24 +206,25 @@ function whitewashTexture(anisotropy: number) {
   return t;
 }
 
-/** Night glow for the whitewash wall: some windows lit warm (same layout as whitewashTexture), the rest dark. */
-function whitewashNightTexture() {
+/** Night glow for a house wall: some windows lit warm (same layout as wallTexture), the rest dark. */
+function wallNightTexture(style: HouseStyle) {
   const PX = 64, W = 9 * PX, H = Math.round(9.6 * PX);
   const c = document.createElement('canvas');
   c.width = W; c.height = H;
   const g = c.getContext('2d')!;
   g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
   const yOf = (m: number) => H - m * PX;
-  const lit = (cx: number, base: number, w: number, h: number, bars: boolean) => {
+  const lit = ([cx, base, w, h]: number[], bars: boolean) => {
     const x0 = cx * PX - (w * PX) / 2, y0 = yOf(base + h), ww = w * PX, hh = h * PX;
     const grad = g.createRadialGradient(x0 + ww / 2, y0 + hh / 2, 2, x0 + ww / 2, y0 + hh / 2, ww * 0.7);
     grad.addColorStop(0, '#ffd08a'); grad.addColorStop(1, '#e8892e');
     g.fillStyle = grad; g.fillRect(x0 + 6, y0 + 6, ww - 12, hh - 12);
     if (bars) { g.fillStyle = '#000'; for (let xx = x0 + 10; xx < x0 + ww - 4; xx += 12) g.fillRect(xx - 1.5, y0, 3, hh); }
   };
-  lit(5.2, 0.9, 1.1, 1.2, true);            // ground-floor cage
-  lit(2.0, 4.1, 0.75, 1.15, false);         // upstairs left window
-  lit(5.2, 4.0, 0.9, 1.0, true);            // upstairs cage
+  const win = wallWindows(style), bars = style.windows !== 'small';
+  lit(win.ground, bars);
+  lit(win.up[0], false);
+  lit(win.upMid, bars);
   const t = new THREE.CanvasTexture(c);
   t.colorSpace = THREE.SRGBColorSpace;
   t.wrapS = t.wrapT = THREE.RepeatWrapping;
@@ -217,12 +263,16 @@ const SETS: Partial<Record<MatKey, TexSet>> = {
   // bare ground between houses: packed sandy earth, as in satellite views of the town
   urban: { id: 'dense_sand', tile: 6.0, tint: '#e6cfaa', weather: { variation: 0.25, patina: 0.12, grime: 0, streaks: 0, dust: 0.3, bleach: 0, blockScale: 14, dustColor: '#e2cba5' } },
   fields: { id: 'dense_sand', tile: 9.0, tint: '#e9c9a0', weather: { variation: 0.5, patina: 0.2, grime: 0, streaks: 0, dust: 0, bleach: 0, blockScale: 30 } },
+  // the cobbled lanes of the old villages and medinas
+  cobbles: { id: 'cobblestone_floor_08', tile: 2.4, tint: '#f6e7cf', weather: { variation: 0.35, patina: 0.15, grime: 0, streaks: 0, dust: 0.45, bleach: 0, blockScale: 3, dustColor: '#e9d6b4' } },
   paving: { id: 'sandstone_blocks_05', tile: 2.0, tint: '#f1dcbc', weather: { variation: 0.45, patina: 0.2, grime: 0, streaks: 0, dust: 0.55, bleach: 0, blockScale: 2.5 } },
   ground: { id: 'dense_sand', tile: 7.0, tint: '#ffe4c2', weather: { variation: 0.35, patina: 0.1, grime: 0, streaks: 0, dust: 0.35, bleach: 0, blockScale: 9, dustColor: '#efd8b2' } },
 };
 
 export class Materials {
   private cache = new Map<MatKey, THREE.Material>();
+  /** House walls with lit windows at night (the site sets their glow). */
+  readonly nightWalls: THREE.MeshStandardMaterial[] = [];
   private loader = new THREE.TextureLoader();
   constructor(private base: string, private anisotropy: number) {}
 
@@ -242,6 +292,8 @@ export class Materials {
     if (key === 'plasterFar') return this.get('plaster');
     if (key === 'roofFar') return this.get('roof');
     if (key === 'whitewashFar') return this.get('whitewash');
+    if (key === 'whitewash') return this.get('wall:sbs:0');
+    if (key.startsWith('wall:') && key.endsWith(':Far')) return this.get(key.slice(0, -4) as MatKey);
     let m = this.cache.get(key);
     if (m) return m;
     const set = SETS[key];
@@ -261,10 +313,20 @@ export class Materials {
       });
       weather(m as THREE.MeshStandardMaterial, set.weather);
     } else if (key === 'plaster') {
-      m = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.92, vertexColors: true, map: facadeTexture(this.anisotropy) });
-    } else if (key === 'whitewash') {
-      m = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.9, vertexColors: true, map: whitewashTexture(this.anisotropy),
-        emissive: '#ffffff', emissiveMap: whitewashNightTexture(), emissiveIntensity: 0 }); // windows light up at night (set by the site)
+      m = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.92, vertexColors: true, map: facadeTexture(this.anisotropy), ...this.relief('plaster') });
+    } else if (key.startsWith('wall:')) {
+      // a house wall in a town's style (src/viewer/house-styles.ts), with real plaster relief from a scanned texture
+      const [, id, n] = key.split(':');
+      const style = HOUSE_STYLES[id] ?? HOUSE_STYLES.sbs;
+      const joinery = style.joinery[Math.min(style.joinery.length - 1, Number(n) || 0)];
+      const w = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.9, vertexColors: true, map: wallTexture(this.anisotropy, style, joinery),
+        emissive: '#ffffff', emissiveMap: wallNightTexture(style), emissiveIntensity: 0, ...this.relief(style.relief) }); // windows light up at night (set by the site)
+      this.nightWalls.push(w);
+      m = w;
+    } else if (key === 'woodwork') {
+      // painted wooden balconies and screens: plank relief, colour from the vertex colours
+      const dir = `${this.base}textures/distressed_painted_planks/`;
+      m = new THREE.MeshStandardMaterial({ color: '#ffffff', vertexColors: true, roughness: 0.8, normalMap: this.tex(dir + 'nor.jpg', 1.4, false), normalScale: new THREE.Vector2(1.2, 1.2) });
     } else if (key === 'terrain') {
       const dir = `${this.base}textures/dense_sand/`;
       m = new THREE.MeshStandardMaterial({ color: '#ffffff', vertexColors: true, roughness: 1, map: this.tex(dir + 'diff.jpg', 6, true), normalMap: this.tex(dir + 'nor.jpg', 6, false) });
@@ -287,6 +349,12 @@ export class Materials {
     }
     this.cache.set(key, m);
     return m;
+  }
+
+  /** Surface relief of plastered walls (normal and roughness from a scanned texture; UVs in metres). */
+  private relief(kind: 'plaster' | 'clay') {
+    const dir = `${this.base}textures/${kind === 'clay' ? 'clay_plaster' : 'painted_plaster_wall'}/`;
+    return { normalMap: this.tex(dir + 'nor.jpg', 2.6, false), normalScale: new THREE.Vector2(0.9, 0.9), roughnessMap: this.tex(dir + 'arm.jpg', 2.6, false) };
   }
 
   dispose() { this.cache.forEach((m) => m.dispose()); }

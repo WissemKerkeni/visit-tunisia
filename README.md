@@ -209,6 +209,21 @@ node scripts/make-town.mjs
 
 The script centres the data on the arena (from its OSM outline), turns it so the long axis is the scene x axis, and writes `src/content/el-jem-town.json` plus a top-view check image `references/el-jem/osm/preview.png`.
 
+## Houses of the 3D towns
+
+Tunisian houses are not all white and blue, so each town has its own house style (`src/viewer/house-styles.ts`, set with `houseStyle` in the town's build): the plaster colour, the door (arched or square, studded or of planks), the windows (bulging iron cages, flat grilles, or small openings with wooden screens), wooden balconies, and a list of joinery colours, one picked per house.
+
+- **Sidi Bou Said:** lime-white and blue only.
+- **Tunis medina:** white and cream, with blue, green, yellow, red-brown, teal and bare-wood doors.
+- **Kairouan:** white, blue and green, some wood.
+- **Sousse:** white, with blue, green, wood and grey.
+- **Carthage:** white villas with square doors in blue, green, wood or grey.
+- **Djerba:** white houses with square doors and small screened windows.
+- **Matmata, Ksar Ouled Soltane:** earth-coloured plaster, palm-wood doors with a little faded blue or green, small windows.
+- **Dougga, Bulla Regia, Sbeitla:** cream and beige village houses with wooden and metal doors.
+
+The walls get real surface relief from scanned textures (Poly Haven, CC0): lime plaster (`painted_plaster_wall`) or earth plaster in the south (`clay_plaster`); balconies show painted planks (`distressed_painted_planks`), and the lanes of the old towns are cobbled (`cobblestone_floor_08`). `node scripts/get-polyhaven.mjs <id> …` downloads more (1k maps) and adds their credits.
+
 ## Project layout
 
 ```

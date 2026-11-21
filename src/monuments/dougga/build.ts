@@ -31,6 +31,7 @@ export function buildDougga(materials: Materials, site?: SiteDef): Promise<Build
   const data = { ...(TOWN as unknown as TownData) };
   data.areas = (TOWN.areas as { k: string; name?: string }[]).map((a) => (/Archaeological Park/i.test(a.name ?? '') ? { ...a, k: 'archaeology' } : a));
   return buildTerrainTown(materials, site, {
+    houseStyle: 'rural', // src/viewer/house-styles.ts
     data,
     core: 0,
     fill: false,

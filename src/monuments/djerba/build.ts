@@ -92,6 +92,7 @@ export function buildDjerba(materials: Materials, site?: SiteDef): Promise<Build
   MURAL.d = Infinity; // chosen afresh on each visit
   const spawn = PLACETTE, look = [VILLAGE[0] + 30, VILLAGE[1] + 10];
   return buildTerrainTown(materials, site, {
+    houseStyle: 'djerba', // src/viewer/house-styles.ts
     data: TOWN as unknown as TownData,
     core: 0,
     corePoly: Array.from({ length: 24 }, (_, i) => [VILLAGE[0] + Math.cos((i / 24) * Math.PI * 2) * 190, VILLAGE[1] + Math.sin((i / 24) * Math.PI * 2) * 170] as P2),

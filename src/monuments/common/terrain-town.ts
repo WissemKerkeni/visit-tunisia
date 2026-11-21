@@ -3,13 +3,15 @@
  * - terrain: AWS Terrain Tiles (SRTM-based heights), with the shoreline from the OpenStreetMap coastline;
  * - streets, building footprints, gardens, cemeteries, pools, piers, open-air cafés: OpenStreetMap (ODbL);
  * - houses on mapped streets without mapped buildings are generated (dense in the old core, villas outside);
- * - lime-washed houses with blue doors, window cages and balconies, flat roofs, bougainvillea, pines, palms;
+ * - houses in the town's own style (src/viewer/house-styles.ts: plaster, door and window colours, balconies), flat
+ *   roofs, bougainvillea, pines, palms;
  * - night: lit windows, wall lanterns, pier lamps, a few warm lights, floodlit minaret, lighthouse beams.
  * Each site passes its data and hooks for its own landmarks. Scene frame: origin = site centre,
  * x = east, z = south, y = metres above sea level.
  */
 import * as THREE from 'three';
 import type { MatKey, Materials } from '../../viewer/materials';
+import { HOUSE_STYLES, joineryIndex } from '../../viewer/house-styles';
 import type { BuildResult, SiteDef } from '../../sites/types';
 import { Collector, buildPalms } from '../el-jem/build';
 import { buildCars, buildLamps, buildTrees, type Placement } from '../el-jem/city';
@@ -77,7 +79,9 @@ export interface TownConfig {
   palette?: { soil: string; scrub: string };
   /** Which roads are paved (default all but paths and tracks); the others are drawn as packed earth. */
   paved?: (r: Road) => boolean;
-  /** Colours of the generated and mapped houses' walls and roofs (default lime-white). */
+  /** How the houses look: a style of src/viewer/house-styles.ts (default 'sbs', lime-white and blue). */
+  houseStyle?: string;
+  /** Colours of the generated and mapped houses' walls and roofs (default lime-white); they tint the style's plaster. */
   houseColors?: { walls: string[]; roofs: string[] };
   /** A city around the old town: generated houses outside it are packed along the streets, 3 to 5 storeys, no gardens. */
   urban?: boolean;
@@ -232,7 +236,8 @@ function drapedRibbon(p: P2[], w: number, lift: number) {
 
 const ROOF = ['#f4f2ec', '#efede6', '#f2efe7', '#e9e6de'];
 const WALL = ['#ffffff', '#fbfaf7', '#f7f6f1', '#fdfcf8', '#f3f2ee'];
-const BLUE = new THREE.Color('#1d68b0');
+let STYLE_ID = 'sbs';
+let STYLE = HOUSE_STYLES.sbs;
 const MAGENTA = ['#c2387a', '#d0508f', '#b52f6e', '#e06aa0'];
 
 // ---------------------------------------------------------------------------
@@ -242,6 +247,8 @@ export async function buildTerrainTown(materials: Materials, site: SiteDef | und
   CORE = cfg.core;
   CORE_POLY = cfg.corePoly ?? null;
   const FLOWERS = cfg.flowers ?? 1;
+  STYLE_ID = cfg.houseStyle && HOUSE_STYLES[cfg.houseStyle] ? cfg.houseStyle : 'sbs';
+  STYLE = HOUSE_STYLES[STYLE_ID];
   GH = T.half; GN = Math.ceil((2 * GH) / G);
   grid = new Uint8Array(GN * GN);
   const res = await fetch(BASE + T.file);
@@ -568,7 +575,7 @@ export async function buildTerrainTown(materials: Materials, site: SiteDef | und
     const cobbled = r.s === 'sett' || r.s === 'paving_stones' || r.s === 'cobblestone' || ((r.k === 'pedestrian' || r.k === 'footway' || r.k === 'steps') && inCore) || (r.k === 'residential' && inCore);
     const lift = r.w >= 7 ? 0.1 : 0.08;
     const paved = cfg.paved ? cfg.paved(r) : !(r.k === 'path' || r.k === 'track');
-    C.add(cobbled ? 'paving' : paved ? 'asphalt' : 'ground', drapedRibbon(r.p, r.w, lift), undefined, false);
+    C.add(cobbled ? 'cobbles' : paved ? 'asphalt' : 'ground', drapedRibbon(r.p, r.w, lift), undefined, false);
   }
 
   // ---- marina piers and boats ----
@@ -625,7 +632,8 @@ export async function buildTerrainTown(materials: Materials, site: SiteDef | und
     const parapet = 0.6;
     // each wall's doors sit on the ground in front of that wall
     const streetLevel = (a: P2, e: P2) => { const L = Math.hypot(e[0] - a[0], e[1] - a[1]) || 1; return Math.min(top - 2.6, groundAt((a[0] + e[0]) / 2 + ((e[1] - a[1]) / L) * 1.2, (a[1] + e[1]) / 2 - ((e[0] - a[0]) / L) * 1.2)); };
-    C.add(`whitewash${far}` as MatKey, paint(walls(p, base, top + parapet, hash(id * 5.1) * 9, streetLevel), wallCol), undefined, near);
+    const ji = joineryIndex(STYLE, hash(id * 4.31 + 0.5));
+    C.add(`wall:${STYLE_ID}:${ji}${far ? ':Far' : ''}` as MatKey, paint(walls(p, base, top + parapet, hash(id * 5.1) * 9, streetLevel), wallCol), undefined, near);
     const roof = flat(p, top);
     if (roof) C.add(`roof${far}` as MatKey, paint(roof, new THREE.Color(ROOFS[Math.floor(hash(id * 3.7) * ROOFS.length)])), undefined, near);
     if (near) C.add('roof', paint(walls(p, top, top + parapet, 0, top, true), wallCol.clone().multiplyScalar(0.96)), undefined, false);
@@ -637,7 +645,7 @@ export async function buildTerrainTown(materials: Materials, site: SiteDef | und
       C.add('roof', paint(cylinder(rd, rd, 0.6, 16, top).translate(c[0], 0, c[1]), WHITE), undefined, false);
       C.add('roof', paint(new THREE.SphereGeometry(rd, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2).translate(c[0], top + 0.6, c[1]), WHITE), undefined, false);
     }
-    // street fronts: blue wooden balconies, bougainvillea, blue railings on roof terraces
+    // street fronts: wooden balconies in the house's colour, bougainvillea, lanterns
     for (let i = 0; i < p.length; i++) {
       const a = p[i], e = p[(i + 1) % p.length], dx = e[0] - a[0], dz = e[1] - a[1], L = Math.hypot(dx, dz);
       if (L < 3.5) continue;
@@ -645,13 +653,14 @@ export async function buildTerrainTown(materials: Materials, site: SiteDef | und
       if (!roadNear(mx + nx * 2.5, mz + nz * 2.5)) continue;
       const gy = groundAt(mx + nx * 1.5, mz + nz * 1.5);
       const rot = new THREE.Matrix4().makeRotationY(-Math.atan2(dz, dx));
-      if (storeys >= 2 && rnd() < (core ? 0.35 : 0.15) && top - gy > 5.5) {
-        // enclosed blue balcony (moucharabieh) on brackets
+      if (storeys >= 2 && rnd() < (core ? 0.35 : 0.15) * STYLE.balconies && top - gy > 5.5) {
+        // enclosed wooden balcony (moucharabieh) on brackets, painted like the house's door
         const off = (rnd() - 0.5) * (L - 3);
         const m = rot.clone().setPosition(mx + (dx / L) * off + nx * 0.45, gy + 3.9, mz + (dz / L) * off + nz * 0.45);
-        C.add('roof', paint(box(1.7, 1.9, 0.75, 0, 0, 0), BLUE), m, false);
-        C.add('roof', paint(box(1.9, 0.18, 0.95, 0, 1.0, 0), new THREE.Color('#164f87')), m, false);
-        C.add('roof', paint(box(1.9, 0.14, 0.95, 0, -0.99, 0), new THREE.Color('#164f87')), m, false);
+        const jc = new THREE.Color(STYLE.joinery[ji]), jd = jc.clone().multiplyScalar(0.78);
+        C.add('woodwork', paint(box(1.7, 1.9, 0.75, 0, 0, 0), jc), m, false);
+        C.add('woodwork', paint(box(1.9, 0.18, 0.95, 0, 1.0, 0), jd), m, false);
+        C.add('woodwork', paint(box(1.9, 0.14, 0.95, 0, -0.99, 0), jd), m, false);
       }
       if (rnd() < (core ? 0.3 : 0.18) * FLOWERS) {
         const off = (rnd() - 0.5) * (L - 1);
@@ -1038,7 +1047,6 @@ export async function buildTerrainTown(materials: Materials, site: SiteDef | und
     beam.position.copy(lAt);
     group.add(beam);
   }
-  const wallMat = materials.get('whitewash') as THREE.MeshStandardMaterial;
 
   const normalMap = (materials.get('water') as THREE.MeshStandardMaterial).normalMap;
   return {
@@ -1052,7 +1060,7 @@ export async function buildTerrainTown(materials: Materials, site: SiteDef | und
       if (normalMap) { normalMap.offset.x += dt * 0.004; normalMap.offset.y += dt * 0.0025; }
       // night factor follows the lamps (the viewer sets their glow from the sun height)
       const night = Math.min(1, lamps.headMaterial.emissiveIntensity / 4);
-      wallMat.emissiveIntensity = 0.9 * night;
+      for (const w of materials.nightWalls) w.emissiveIntensity = 0.9 * night;
       lanternMat.emissiveIntensity = 3 * night;
       beamMat.opacity = 0.35 * night;
       beam.visible = night > 0.05;

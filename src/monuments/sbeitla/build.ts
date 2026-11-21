@@ -58,6 +58,7 @@ export function buildSbeitla(materials: Materials, site?: SiteDef): Promise<Buil
   data.areas = (TOWN.areas as Area[]).map((a) => (/Ruines romaines/i.test(a.name ?? '') ? { ...a, k: 'archaeology' } : a));
   const spawn = fo(-30, 40), look = fo(60, 35), sq = fo(22, 35);
   return buildTerrainTown(materials, site, {
+    houseStyle: 'rural', // src/viewer/house-styles.ts
     data,
     core: 0,
     treeR: 200,

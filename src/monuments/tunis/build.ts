@@ -127,6 +127,7 @@ const TILE = new THREE.Color('#24563f');    // the Tourbet's dark green glazed t
 export function buildTunis(materials: Materials, site?: SiteDef): Promise<BuildResult> {
   const spawn: P2 = [432, -77], att = ATT_VIEW;
   return buildTerrainTown(materials, site, {
+    houseStyle: 'medina', // src/viewer/house-styles.ts
     data: TOWN as unknown as TownData,
     core: 0,
     corePoly: MEDINA,

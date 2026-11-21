@@ -71,6 +71,7 @@ const PAVE = new THREE.Color('#cbbd9f');
 export function buildSousse(materials: Materials, site?: SiteDef): Promise<BuildResult> {
   const court = mq(17, MQ_W / 2);
   return buildTerrainTown(materials, site, {
+    houseStyle: 'sahel', // src/viewer/house-styles.ts
     data: TOWN as unknown as TownData,
     core: 0,
     corePoly: MEDINA,

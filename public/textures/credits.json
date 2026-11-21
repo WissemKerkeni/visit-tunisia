@@ -52,5 +52,41 @@
     ],
     "license": "CC0",
     "source": "https://polyhaven.com/a/concrete_pavement"
+  },
+  {
+    "asset": "painted_plaster_wall",
+    "name": "Painted Plaster Wall",
+    "authors": [
+      "Amal Kumar"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/painted_plaster_wall"
+  },
+  {
+    "asset": "clay_plaster",
+    "name": "Clay Plaster",
+    "authors": [
+      "Amal Kumar"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/clay_plaster"
+  },
+  {
+    "asset": "distressed_painted_planks",
+    "name": "Distressed Painted Planks",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/distressed_painted_planks"
+  },
+  {
+    "asset": "cobblestone_floor_08",
+    "name": "Cobblestone Floor 08",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/cobblestone_floor_08"
   }
 ]

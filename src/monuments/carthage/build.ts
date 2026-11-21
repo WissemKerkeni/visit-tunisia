@@ -27,6 +27,7 @@ const BATHS_YAW = -Math.atan2(U[1], U[0]);
 
 export function buildCarthage(materials: Materials, site?: SiteDef): Promise<BuildResult> {
   return buildTerrainTown(materials, site, {
+    houseStyle: 'coast', // src/viewer/house-styles.ts
     data: TOWN as unknown as TownData,
     core: 0, // no old medina here: villas with gardens around the archaeological parks
     spawn: { x: 470, z: 0 },          // in the baths park, on the landward side

@@ -13,6 +13,7 @@ import { box } from '../el-jem/geometry';
 
 export function buildSidiBouSaid(materials: Materials, site?: SiteDef): Promise<BuildResult> {
   return buildTerrainTown(materials, site, {
+    houseStyle: 'sbs', // src/viewer/house-styles.ts
     data: TOWN as unknown as TownData,
     core: 330,
     // on Rue Habib Thameur, below the Café des Nattes, looking up the lane
