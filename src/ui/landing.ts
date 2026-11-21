@@ -142,7 +142,10 @@ export function mountLanding(root: HTMLElement, openSite: (id: string) => void, 
     const card = h('aside', { class: 'ocard', 'aria-live': 'polite' });
     const hero = h('section', { class: 'ohero', id: 'map' });
     const scale = h('div', { class: 'oscale' }, h('i', {}), h('span', {}));
-    const hint = h('div', { class: `ohint${state.hinted ? ' gone' : ''}` }, t(matchMedia('(pointer: coarse)').matches ? 'mapHintTouch' : 'mapHint'));
+    const mac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+    const hintText = matchMedia('(pointer: coarse)').matches ? t('mapHintTouch') : mac ? t('mapHint').replace(/\b(Ctrl|Strg)\b/, '⌘') : t('mapHint');
+    const hint = h('div', { class: `ohint${state.hinted ? ' gone' : ''}` }, hintText);
+    let nudgeTimer = 0;
     let map: AtlasMap;
     map = createAtlasMap({
       items, rtl, reduced, intro: firstRender,
@@ -160,6 +163,12 @@ export function mountLanding(root: HTMLElement, openSite: (id: string) => void, 
         (scale.firstChild as HTMLElement).style.width = `${((len / 111.2) * UNITS_PER_DEG_LAT * s).toFixed(0)}px`;
         scale.lastChild!.textContent = `${len} km`;
         if (k > 1.05 && !state.hinted) { state.hinted = true; hint.classList.add('gone'); }
+      },
+      // the wheel scrolled the page over the map: show again, briefly, how to zoom
+      onWheelHint: () => {
+        hint.classList.remove('gone'); hint.classList.add('nudge');
+        clearTimeout(nudgeTimer);
+        nudgeTimer = window.setTimeout(() => { hint.classList.remove('nudge'); if (state.hinted) hint.classList.add('gone'); }, 1800);
       },
     });
     map.setLayer('wildlife', state.wildlife && (!state.cats.size || state.cats.has('nature')));

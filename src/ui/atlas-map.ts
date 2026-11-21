@@ -33,6 +33,8 @@ export interface AtlasOpts {
   onLine: (l: Line) => void;
   onTown: (id: string) => void;
   onView?: (k: number, pxPerUnit: number) => void;
+  /** The wheel turned over the map without Ctrl / ⌘ and without the map in use: say how to zoom. */
+  onWheelHint?: () => void;
 }
 export interface AtlasMap {
   el: SVGSVGElement;
@@ -351,11 +353,23 @@ export function createAtlasMap(o: AtlasOpts): AtlasMap {
   };
   const local = (e: { clientX: number; clientY: number }): XY => { const r = el.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
 
+  // The wheel scrolls the page unless the visitor means the map: Ctrl / ⌘ held (a trackpad pinch sends ctrlKey too),
+  // or the map was pressed and the pointer has not left it nor the page scrolled since. So scrolling back up the page
+  // never zooms the map by surprise when it reaches the top.
+  let engaged = false;
+  const disengage = () => { engaged = false; };
+  el.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') disengage(); });
+  addEventListener('scroll', disengage, { passive: true });
+  let nudged = 0;
   const onWheel = (e: WheelEvent) => {
-    if (e.ctrlKey) { e.preventDefault(); zoomAt(...local(e), view.k * Math.exp(-e.deltaY * 0.01), false); return; }   // trackpad pinch
+    if (e.ctrlKey) { e.preventDefault(); zoomAt(...local(e), view.k * Math.exp(-e.deltaY * 0.01), false); return; }   // trackpad pinch, Ctrl + wheel
+    if (!e.metaKey && !engaged) {
+      if (performance.now() - nudged > 1500) { nudged = performance.now(); o.onWheelHint?.(); }
+      return;
+    }
     const inward = e.deltaY < 0;
-    // zooming in starts only from the top of the page; zooming out hands the wheel back to the page at the whole-country view
-    if (inward ? (view.k <= 1.001 && scrollY > 8) : view.k <= 1.001) return;
+    // zooming out hands the wheel back to the page at the whole-country view
+    if (!inward && view.k <= 1.001) return;
     e.preventDefault();
     const next = view.k * Math.exp(-Math.max(-300, Math.min(300, e.deltaY)) * 0.0021);
     zoomAt(...local(e), inward ? next : Math.max(1, next), false);   // the wheel stops at the home view
@@ -367,6 +381,7 @@ export function createAtlasMap(o: AtlasOpts): AtlasMap {
   let start: { x: number; y: number; fx: number; fy: number } | null = null, pinch: { d: number; k: number } | null = null;
   el.addEventListener('pointerdown', (e) => {
     if (e.pointerType === 'mouse' && e.button !== 0) return;
+    engaged = true;
     touches.set(e.pointerId, [e.clientX, e.clientY]);
     dragged = false;
     if (touches.size === 1) start = { x: e.clientX, y: e.clientY, fx: view.fx, fy: view.fy };
@@ -461,6 +476,6 @@ export function createAtlasMap(o: AtlasOpts): AtlasMap {
       pts.forEach((p, i) => { const [x, y] = P(p); routeG.append(svg('g', { transform: `translate(${x.toFixed(1)},${y.toFixed(1)})` }, svg('g', { class: 'kz stopno' }, svg('circle', { r: 7, cy: -19 }), svg('text', { y: -15.4 }, String(i + 1))))); });
       if (!o.reduced) routeG.append(svg('g', {}, svg('animateMotion', { dur: `${Math.max(8, pts.length * 2.6)}s`, repeatCount: 'indefinite', path: d }), svg('circle', { r: 3.4, class: 'traveller kz2' })));
     },
-    destroy() { cancelAnimationFrame(raf); clearTimeout(introTimer); io.disconnect(); el.removeEventListener('wheel', onWheel); },
+    destroy() { cancelAnimationFrame(raf); clearTimeout(introTimer); io.disconnect(); el.removeEventListener('wheel', onWheel); removeEventListener('scroll', disengage); },
   };
 }

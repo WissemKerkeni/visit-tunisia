@@ -92,7 +92,7 @@ const UI = {
   resetView: { en: 'Whole country', fr: 'Tout le pays', ar: 'كامل البلاد' },
   surprise: { en: 'Surprise me', fr: 'Surprenez-moi', ar: 'فاجئني' },
   searchPlaces: { en: 'Search a place…', fr: 'Chercher un lieu…', ar: 'ابحث عن مكان…' },
-  mapHint: { en: 'Scroll up or pinch to zoom · drag to move', fr: 'Molette vers le haut ou pincez pour zoomer · glissez pour déplacer', ar: 'مرّر للأعلى أو قرّب بإصبعين للتكبير · اسحب للتحريك' },
+  mapHint: { en: 'Ctrl + scroll to zoom · drag to move', fr: 'Ctrl + molette pour zoomer · glissez pour déplacer', ar: 'اضغط Ctrl ومرّر للتكبير · اسحب للتحريك' },
   mapHintTouch: { en: 'Pinch to zoom · drag to move', fr: 'Pincez pour zoomer · glissez pour déplacer', ar: 'قرّب بإصبعين للتكبير · اسحب للتحريك' },
   layerWeather: { en: 'Weather', fr: 'Météo', ar: 'الطقس' },
   nowShort: { en: 'Now', fr: 'Maintenant', ar: 'الآن' },
