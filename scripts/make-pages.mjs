@@ -59,7 +59,10 @@ const fmtH = (h, l) => { const m = Math.max(15, Math.round((h * 60) / 15) * 15);
 
 // structured data shared by every page: the site and who publishes it
 const WEBSITE = SITE ? { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'Visit Tunisia', url: `${SITE}/`, inLanguage: LANGS,
-  publisher: { '@type': 'Organization', name: 'Visit Tunisia', url: `${SITE}/`, logo: `${SITE}/icons/icon-512.png` } } : null;
+  publisher: { '@type': 'Organization', name: 'Visit Tunisia', url: `${SITE}/`, logo: `${SITE}/icons/icon-512.png` },
+  creator: { '@type': 'Organization', name: 'Storeware TN', url: 'https://storeware.tn/' }, copyrightYear: 2026 } : null;
+/** The footer of every plain-HTML page: copyright and who made the site. */
+const foot = (l) => `<footer><p>© 2026 Visit Tunisia · ${esc(ui('madeBy', l)).replace('{name}', '<a href="https://storeware.tn/">Storeware TN</a>')}</p></footer>`;
 const TUNISIA = { '@type': 'Country', name: 'Tunisia', identifier: 'TN' };
 const crumbs = (l, list) => (SITE ? { '@type': 'BreadcrumbList', itemListElement: list.map(([name, rel], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(rel) })) } : null);
 const graph = (...nodes) => ({ '@context': 'https://schema.org', '@graph': [WEBSITE, ...nodes].filter(Boolean) });
@@ -86,7 +89,7 @@ function page({ l, depth, title, desc, image, url, alternates, jsonld, body, ext
     .replace(/<title>[\s\S]*?<\/title>/, '')
     .replace(/<meta name="description"[^>]*>/, '')
     .replace('<meta charset="UTF-8" />', `<meta charset="UTF-8" />\n    ${head}`)
-    .replace('<div id="app"></div>', `<div id="app"><main class="seo">${body}</main></div>`);
+    .replace('<div id="app"></div>', `<div id="app"><main class="seo">${body}</main>${foot(l)}</div>`);
 }
 const write = (rel, html) => { const f = path.join(DIST, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, html); };
 /** Every page with its language versions, for the sitemap. */
@@ -184,7 +187,7 @@ pages.unshift((x) => `${x}/`);
   ].filter(Boolean).join('\n    ');
   const list = items.map((it) => `<li><a href="en/${it.id}/">${esc(it.name.en)}</a></li>`).join('');
   write('index.html', template.replace('<meta charset="UTF-8" />', `<meta charset="UTF-8" />\n    ${rootHead}`)
-    .replace('<div id="app"></div>', `<div id="app"><main class="seo">${nav('en')}<h1>${esc(D.UI_TEXTS.heroTitle.en)}</h1><p>${esc(D.UI_TEXTS.heroText.en)}</p><ul>${list}</ul></main></div>`));
+    .replace('<div id="app"></div>', `<div id="app"><main class="seo">${nav('en')}<h1>${esc(D.UI_TEXTS.heroTitle.en)}</h1><p>${esc(D.UI_TEXTS.heroText.en)}</p><ul>${list}</ul></main>${foot('en')}</div>`));
 }
 
 // ---- for search engines and AI assistants ----

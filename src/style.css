@@ -554,6 +554,8 @@ html[lang='ar'] .mcard-tag { letter-spacing: 0; }
 .mcard .btn { padding: 8px 14px; font-size: 13.5px; }
 .ofooter { border-top-color: var(--o-line); color: rgba(247, 243, 238, .55); gap: 8px 24px; flex-wrap: wrap; }
 .ofooter .indep { flex: 1; min-width: 240px; font-size: 12.5px; }
+.ofooter .omade a { color: var(--o-ochre); font-weight: 600; text-decoration: none; }
+.ofooter .omade a:hover, .ofooter .omade a:focus-visible { color: var(--o-terra); text-decoration: underline; }
 .pcredit { display: block; font-size: 11px; color: rgba(247, 243, 238, .45); text-decoration: none; margin: -4px 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pcredit:hover { color: var(--o-sand); text-decoration: underline; }
 .pcredit:empty { display: none; }

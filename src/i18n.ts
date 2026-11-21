@@ -194,6 +194,7 @@ const UI = {
     ar: 'اثنا عشر معلمًا تتجوّل فيها بالأبعاد الثلاثة، وشواطئ وواحات وحدائق ومدن عتيقة تراها على أرض الواقع. استعمل المرشّحات لتضييق القائمة.',
   },
   nPlaces: { en: '{n} places', fr: '{n} lieux', ar: '{n} مكانًا' },
+  madeBy: { en: 'Developed and designed by {name}', fr: 'Développé et conçu par {name}', ar: 'تطوير وتصميم {name}' },
   independent: { en: 'An independent guide, not an official tourism site. Map: NASA Blue Marble, OpenStreetMap, Natural Earth.', fr: 'Un guide indépendant, pas un site officiel de tourisme. Carte : NASA Blue Marble, OpenStreetMap, Natural Earth.', ar: 'دليل مستقلّ وليس موقعًا سياحيًا رسميًا. الخريطة: NASA Blue Marble وOpenStreetMap وNatural Earth.' },
   seaLabel: { en: 'Mediterranean Sea', fr: 'Mer Méditerranée', ar: 'البحر الأبيض المتوسط' },
   algeria: { en: 'Algeria', fr: 'Algérie', ar: 'الجزائر' },

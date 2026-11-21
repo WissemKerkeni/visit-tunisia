@@ -651,8 +651,10 @@ export function mountLanding(root: HTMLElement, openSite: (id: string) => void, 
       h('div', { class: 'ofilterbar' }, chips(), count),
       grid);
 
+    const [madeA, madeB = ''] = t('madeBy').split('{name}');
     const footer = h('footer', { class: 'footer ofooter' },
-      h('span', {}, `© ${t('brand')}`),
+      h('span', {}, `© 2026 ${t('brand')}`),
+      h('span', { class: 'omade' }, madeA, h('a', { href: 'https://storeware.tn/', target: '_blank', rel: 'noopener' }, 'Storeware TN'), madeB),
       h('span', { class: 'indep' }, t('independent')),
       installBtn(),
       h('button', { class: 'link', onclick: () => openCredits() }, t('credits')));
