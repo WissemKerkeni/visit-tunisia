@@ -1,0 +1,183 @@
+{
+  "pass": {
+    "text": "No annual museum pass found. Combined Bardo + Carthage sites ticket: 45 TND (from Apr 2026), 70 TND from Jan 2027. Tunisians/residents enter free on the first Sunday of each month.",
+    "source": "https://businessnews.com.tn/2026/04/01/musees-et-sites-archeologiques-la-tunisie-fait-grimper-la-facture-pour-les-visiteurs-etrangers/1394648/"
+  },
+  "sites": {
+    "el-jem": {
+      "hours": "7:30–18:30 in summer, 7:30–17:30 in winter (Ramadan 8:00–17:00)",
+      "price": "20 TND (non-residents, from Apr 2026; 30 TND from Jan 2027); residents 8 TND",
+      "closed": null,
+      "notes": "Ticket covers amphitheatre and El Jem museum",
+      "year": 2026,
+      "source": "https://www.tekiano.com/2026/04/01/musees-tunisiens-et-sites-historiques-nouveaux-tarifs-dentree-a-partir-du-01-avril-2026/",
+      "source_hours": "https://www.patrimoinedetunisie.com.tn/monuments/lamphitheatre-de-thysdrus-el-jem/apercu/"
+    },
+    "carthage": {
+      "hours": "8:00–18:00 in summer, 8:30–17:00 in winter",
+      "price": "20 TND combined sites ticket (non-residents, from Apr 2026; 30 TND from Jan 2027); residents 9 TND",
+      "closed": null,
+      "notes": "Bardo + Carthage combined ticket 45 TND",
+      "year": 2026,
+      "source": "https://www.tekiano.com/2026/04/01/musees-tunisiens-et-sites-historiques-nouveaux-tarifs-dentree-a-partir-du-01-avril-2026/",
+      "source_hours": "https://www.patrimoinedetunisie.com.tn/monuments/les-thermes-dantonin/apercu/"
+    },
+    "tunis-medina": {
+      "hours": "Zitouna 8:00–14:00 (Fri to 12:00); Dar Ben Abdallah 9:00–16:00 winter, 8:00–14:00 summer",
+      "price": "Zitouna 5 TND (category E); Dar Ben Abdallah free",
+      "closed": "Dar Ben Abdallah: Mondays",
+      "notes": "Zitouna prayer hall closed to non-Muslims",
+      "year": 2026,
+      "source": "https://managers.tn/2026/04/01/voici-les-nouveaux-tarifs-pour-les-musees-et-sites-historiques-en-tunisie/",
+      "source_hours": "https://www.patrimoinedetunisie.com.tn/en/museums/the-ben-abdallah-museum-tunis/",
+      "source_extra": "https://carthagemagazine.com/the-great-mosque-of-ez-zitouna/"
+    },
+    "dougga": {
+      "hours": "8:00–19:00 in summer, 8:30–17:30 in winter (Ramadan 8:00–17:00)",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": null,
+      "notes": "Category D, price unchanged in Apr 2026 tariff",
+      "year": 2026,
+      "source": "https://www.patrimoinedetunisie.com.tn/sites/le-site-archeologique-de-dougga/apercu/",
+      "source_extra": "https://tunisie.co/article/21633/culture/musees-et-monuments/nouveaux-tarifs-officiel-pour-les-musees-et-monuments-de-tunisie-2026-341611"
+    },
+    "bulla-regia": {
+      "hours": "8:00–19:00 in summer, 8:30–17:30 in winter",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": null,
+      "notes": "Category D, price unchanged in Apr 2026 tariff",
+      "year": 2026,
+      "source": "https://www.patrimoinedetunisie.com.tn/sites/site-archeologique-de-bulla-regia/",
+      "source_extra": "https://tunisie.co/article/21633/culture/musees-et-monuments/nouveaux-tarifs-officiel-pour-les-musees-et-monuments-de-tunisie-2026-341611"
+    },
+    "kairouan": {
+      "hours": "Great Mosque 7:30–14:00 in summer, 8:00–14:00 in winter",
+      "price": "20 TND combined ticket (non-residents, from Apr 2026; 30 TND from Jan 2027)",
+      "closed": "Friday from 12:00",
+      "notes": "Residents enter the Great Mosque free",
+      "year": 2026,
+      "source": "https://www.tekiano.com/2026/04/01/musees-tunisiens-et-sites-historiques-nouveaux-tarifs-dentree-a-partir-du-01-avril-2026/",
+      "source_hours": "https://www.patrimoinedetunisie.com.tn/monuments/la-grande-mosquee-de-kairouan/apercu/"
+    },
+    "sousse": {
+      "hours": "Ribat 8:00–19:00 summer, 8:00–17:30 winter; Museum 9:00–18:00 summer, 9:00–17:00 winter",
+      "price": "Museum 10 TND; Ribat 8–10 TND (non-residents); residents 5 TND",
+      "closed": "Museum: Mondays",
+      "notes": "Ribat listed at 8 TND by AMVPPC, at 10 TND (cat. C) in 2026 press",
+      "year": 2026,
+      "source": "https://www.patrimoinedetunisie.com.tn/musees/musee-archeologique-de-sousse/apercu/",
+      "source_hours": "https://www.patrimoinedetunisie.com.tn/monuments/ribat-de-sousse/apercu/",
+      "source_extra": "https://tunisie.co/article/21633/culture/musees-et-monuments/nouveaux-tarifs-officiel-pour-les-musees-et-monuments-de-tunisie-2026-341611"
+    },
+    "sbeitla": {
+      "hours": "8:00–19:00 in summer, 8:00–17:30 in winter",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": "Museum: Mondays",
+      "notes": "Category D, price unchanged in Apr 2026 tariff",
+      "year": 2026,
+      "source": "https://www.patrimoinedetunisie.com.tn/sites/site-archeologique-de-sbeitla/",
+      "source_extra": "https://tunisie.co/article/21633/culture/musees-et-monuments/nouveaux-tarifs-officiel-pour-les-musees-et-monuments-de-tunisie-2026-341611"
+    },
+    "matmata": {
+      "hours": null,
+      "price": null,
+      "closed": null,
+      "notes": "Hotel Sidi Driss visit is usually included in organised tours; no current walk-in fee found",
+      "year": null,
+      "source": null
+    },
+    "djerba": {
+      "hours": "Heritage Museum 9:00–17:00 summer, 9:30–16:30 winter",
+      "price": "Heritage Museum 8 TND (residents 5 TND); El Ghriba free, donations welcome",
+      "closed": "Museum: Fridays",
+      "notes": "Ghriba access can change for Shabbat, holidays and security; modest dress",
+      "year": 2026,
+      "source": "https://www.patrimoinedetunisie.com.tn/musees/musee-du-patrimoine-traditionnel-de-djerba/apercu/",
+      "source_extra": "https://unusualnomad.com/el-ghriba-synagogue-djerba/"
+    },
+    "ksar-ouled-soltane": {
+      "hours": null,
+      "price": null,
+      "closed": null,
+      "notes": "Small entry fee (about US$1–3), extra for cameras",
+      "year": 2026,
+      "source": "https://www.takeyourbackpack.com/backpacking-in-tunisia/visit-ksar-ouled-soltane/"
+    },
+    "kerkouane": {
+      "hours": "9:00–18:00 in summer, 9:00–16:00 in winter",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": "Mondays",
+      "notes": "Category D, price unchanged in Apr 2026 tariff",
+      "year": 2026,
+      "source": "https://www.patrimoinedetunisie.com.tn/sites/kerkouane/",
+      "source_extra": "https://tunisie.co/article/21633/culture/musees-et-monuments/nouveaux-tarifs-officiel-pour-les-musees-et-monuments-de-tunisie-2026-341611"
+    },
+    "monastir": {
+      "hours": "8:00–19:00 in summer, 8:30–17:30 in winter",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": null,
+      "notes": "Ribat; not confirmed in 2026 tariff reports",
+      "year": 2024,
+      "source": "https://www.patrimoinedetunisie.com.tn/monuments/ribat-de-monastir/apercu/"
+    },
+    "mahdia": {
+      "hours": "Mahdia Museum 9:00–16:00 summer, 9:30–16:00 winter",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": "Mondays",
+      "notes": "Visit through the museum ends on the Skifa el Kahla terrace",
+      "year": 2024,
+      "source": "https://www.patrimoinedetunisie.com.tn/musees/musee-de-mahdia/apercu/"
+    },
+    "zaghouan": {
+      "hours": null,
+      "price": null,
+      "closed": null,
+      "notes": "Grounds often free; a small fee may apply",
+      "year": 2026,
+      "source": "https://www.takeyourbackpack.com/backpacking-in-tunisia/visit-roman-water-temple/"
+    },
+    "thuburbo-majus": {
+      "hours": "8:00–17:00 in summer, 8:30–17:30 in winter",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": null,
+      "notes": "Category D, price unchanged in Apr 2026 tariff",
+      "year": 2026,
+      "source": "https://www.patrimoinedetunisie.com.tn/sites/site-archeologique-de-thuburbo-maius/",
+      "source_extra": "https://tunisie.co/article/21633/culture/musees-et-monuments/nouveaux-tarifs-officiel-pour-les-musees-et-monuments-de-tunisie-2026-341611"
+    },
+    "oudhna": {
+      "hours": "9:00–17:00 all year (Ramadan 9:00–16:00)",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": null,
+      "notes": null,
+      "year": 2024,
+      "source": "https://www.patrimoinedetunisie.com.tn/sites/site-archeologique-doudhna/"
+    },
+    "makthar": {
+      "hours": "8:00–17:00 all year",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": "Mondays",
+      "notes": "Category D, price unchanged in Apr 2026 tariff",
+      "year": 2026,
+      "source": "https://www.patrimoinedetunisie.com.tn/sites/makthar-mactaris/",
+      "source_extra": "https://tunisie.co/article/21633/culture/musees-et-monuments/nouveaux-tarifs-officiel-pour-les-musees-et-monuments-de-tunisie-2026-341611"
+    },
+    "bardo": {
+      "hours": "9:00–17:00 in summer, 9:30–16:30 in winter",
+      "price": "30 TND (non-residents, from Apr 2026; 45 TND from Jan 2027); residents 8 TND",
+      "closed": "Mondays",
+      "notes": "Bardo + Carthage combined ticket 45 TND",
+      "year": 2026,
+      "source": "https://www.tekiano.com/2026/04/01/musees-tunisiens-et-sites-historiques-nouveaux-tarifs-dentree-a-partir-du-01-avril-2026/",
+      "source_hours": "https://www.patrimoinedetunisie.com.tn/musees/musee-national-du-bardo/apercu/"
+    },
+    "chemtou": {
+      "hours": "9:30–15:00 all year",
+      "price": "8 TND (non-residents); residents 5 TND",
+      "closed": null,
+      "notes": "Site and museum",
+      "year": 2024,
+      "source": "https://www.patrimoinedetunisie.com.tn/sites/le-site-archeologique-de-chimtou/"
+    }
+  }
+}

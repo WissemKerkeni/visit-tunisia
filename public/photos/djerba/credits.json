@@ -1,0 +1,58 @@
+{
+  "ghriba": {
+    "file": "photos/djerba/ghriba.jpg",
+    "author": "Dr. Ondřej Havelka (cestovatel)",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Ghriba_Synagogue.jpg",
+    "title": "El Ghriba Synagogue.jpg"
+  },
+  "hall": {
+    "file": "photos/djerba/hall.jpg",
+    "author": "Citizen59 from Tunis, Tunisie",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Synagogue_La_Ghriba_de_Djerba_(8480818301).jpg",
+    "title": "Synagogue La Ghriba de Djerba (8480818301).jpg"
+  },
+  "funduq": {
+    "file": "photos/djerba/funduq.jpg",
+    "author": "Citizen59 from Tunis, Tunisie",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Synagogue_La_Ghriba_de_Djerba_(8480831921).jpg",
+    "title": "Synagogue La Ghriba de Djerba (8480831921).jpg"
+  },
+  "djerbahood": {
+    "file": "photos/djerba/djerbahood.jpg",
+    "author": "Rani777- Baha-Eddine MKD",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Djerba_Er_Riadh_Street_Art_13.JPG",
+    "title": "Djerba Er Riadh Street Art 13.JPG"
+  },
+  "mosque": {
+    "file": "photos/djerba/mosque.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosque_Shikh_01.jpg",
+    "title": "Mosque Shikh 01.jpg"
+  },
+  "menzel": {
+    "file": "photos/djerba/menzel.jpg",
+    "author": "SuperManu",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Djerba_architecture_house.jpg",
+    "title": "Djerba architecture house.jpg"
+  },
+  "shrine": {
+    "file": "photos/djerba/shrine.jpg",
+    "author": "نعيم قربوسي",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:%D8%B2%D8%A7%D9%88%D9%8A%D8%A9_%D8%B3%D9%8A%D8%AF%D9%8A_%D8%B9%D9%84%D9%8A_%D8%A8%D8%A3%D8%BA%D9%8A%D8%B1_10.jpg",
+    "title": "زاوية سيدي علي بأغير 10.jpg"
+  }
+}

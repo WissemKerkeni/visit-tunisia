@@ -1,0 +1,263 @@
+{
+  "sections": [
+    {
+      "id": "visa",
+      "icon": "🛂",
+      "title": "Visas and passports",
+      "points": [
+        "EU and Schengen countries: most EU citizens can stay up to 90 days without a visa (Germany is listed at 4 months, Bulgaria at 2 months); Norway, Switzerland and Iceland also get 90 days. Bring your passport, as other ID cards are not accepted.",
+        "United Kingdom: no visa needed for up to 90 days. Holders of Crown Dependency passports may need to buy a visa on arrival.",
+        "United States: no visa needed for up to 90 days.",
+        "Canada: no tourist visa needed for stays of up to 90 days, according to the Canadian government.",
+        "Russia: no visa needed for up to 90 days.",
+        "Ukraine: a visa is normally required; visa-free entry is listed only for travellers on an organised tour with a hotel voucher.",
+        "China: no visa needed for up to 90 days.",
+        "Saudi Arabia, UAE and Qatar: no visa needed for up to 90 days.",
+        "Algeria, Libya and Morocco: no visa needed for up to 90 days.",
+        "Travellers who do need a visa must get it in advance from a Tunisian embassy or consulate; there is no national e-visa system yet.",
+        "Passport validity: the UK says it must be valid for your whole stay, while Canada advises at least six months beyond your departure date. Keep it in good condition, as damaged passports can cause problems.",
+        "Border officers may ask for your return or onward ticket and proof of where you are staying.",
+        "Overstaying the permitted period leads to a fine, paid at the airport or at a police station.",
+        "Visa rules change and vary by nationality: check with your nearest Tunisian embassy or consulate before booking."
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Visa_policy_of_Tunisia",
+        "https://www.gov.uk/foreign-travel-advice/tunisia/entry-requirements",
+        "https://travel.gc.ca/destinations/tunisia",
+        "https://www.discovertunisia.com/uk/en/node/323"
+      ]
+    },
+    {
+      "id": "money",
+      "icon": "💶",
+      "title": "Money",
+      "points": [
+        "The currency is the Tunisian dinar (TND), divided into 1,000 millimes.",
+        "The dinar is a closed currency: you may not bring dinars into Tunisia or take them out. Change money after you arrive.",
+        "Declare foreign cash on arrival if it reaches the legal threshold (20,000 TND or more); undeclared currency can be confiscated.",
+        "Change money only at banks, licensed exchange offices, hotels or post offices. Bring your passport, since exchange offices ask for ID even for small amounts.",
+        "Keep your exchange and ATM receipts and any currency declaration: you need them to change leftover dinars back before you leave.",
+        "ATMs are easy to find in towns and tourist areas and take Visa and Mastercard.",
+        "Cards are accepted in many hotels, restaurants and shops in cities and resorts, but carry cash for taxis, louages, buses, markets and small places.",
+        "Hotels charge a tourist tax per person per night (higher in 4- and 5-star hotels), for up to ten nights, usually paid on arrival."
+      ],
+      "sources": [
+        "https://discovertunisia.com/en/node/158",
+        "https://www.gov.uk/foreign-travel-advice/tunisia/entry-requirements",
+        "https://travel.gc.ca/destinations/tunisia",
+        "https://www.lapresse.tn/2026/01/31/touristes-etrangers-ce-qui-change-dans-les-bureaux-de-change-tunisiens/",
+        "https://www.discovertunisia.com/uk/en/node/323",
+        "https://en.wikivoyage.org/wiki/Tunisia",
+        "https://www.cestee.com/airport/tunis-tun/transport"
+      ]
+    },
+    {
+      "id": "safety",
+      "icon": "🛡️",
+      "title": "Safety",
+      "points": [
+        "Most visits are trouble-free, but the UK, US and Canadian governments all ask travellers to stay alert because of the risk of terrorism, especially at tourist sites, religious sites, festivals and crowded places.",
+        "The US State Department rates Tunisia Level 2 (Exercise Increased Caution); Canada advises a high degree of caution across the country.",
+        "The UK advises against all travel to the Chaambi Mountains National Park, the military zones of Mount Salloum, Mount Sammamma and Mount Mghila, the militarised zone south of El Borma and Dhehiba, areas within 20 km of the Libyan border north of Dhehiba, and Ben Guerdane.",
+        "The UK also advises against all but essential travel to Kasserine Governorate (including Sbeitla), areas close to the Algerian border, Mount Orbata, and within 75 km of the Libyan border (Zarzis and the C118 road are excluded).",
+        "The US and Canada likewise advise against travel to the Chaambi area, the military zone south of Remada and the border areas with Algeria and Libya.",
+        "Theft is the most common crime: keep valuables out of sight and watch for distraction tricks.",
+        "Avoid demonstrations and strikes, which can start with little warning and may disrupt transport.",
+        "Carry ID at all times (a copy of your passport photo page is fine); police may ask for it at checkpoints.",
+        "Drones are illegal to bring in without authorisation, and some recording devices may be held at customs.",
+        "Follow beach flag warnings and take care where there are no lifeguards."
+      ],
+      "sources": [
+        "https://www.gov.uk/foreign-travel-advice/tunisia/warnings-and-insurance",
+        "https://www.gov.uk/foreign-travel-advice/tunisia/safety-and-security",
+        "https://www.gov.uk/foreign-travel-advice/tunisia/entry-requirements",
+        "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/tunisia-travel-advisory.html",
+        "https://travel.gc.ca/destinations/tunisia"
+      ]
+    },
+    {
+      "id": "health",
+      "icon": "🩺",
+      "title": "Health",
+      "points": [
+        "Tap water is treated in major cities and coastal areas, but bottled water is cheap, widely sold and advisable in rural areas and the south.",
+        "Take care with food and water hygiene; hepatitis A and typhoid vaccines are commonly recommended, so see a travel clinic before you go.",
+        "Get travel insurance that covers medical treatment and evacuation: there is no free care for foreigners and private clinics expect payment on the spot.",
+        "Medical facilities are generally adequate in big cities and tourist areas, but limited in rural and desert regions.",
+        "Pharmacies are common in towns and well stocked; some stronger medicines need a local prescription.",
+        "Bring prescription medicines in their original packaging with a doctor's note.",
+        "Heat exhaustion and dehydration are real risks, especially inland in summer: drink plenty, cover up, use sunscreen and avoid the midday sun.",
+        "Rabid dogs are common in Tunisia: avoid touching animals and get medical help at once if bitten."
+      ],
+      "sources": [
+        "https://www.worldtravelguide.net/guides/africa/tunisia/health",
+        "https://www.gov.uk/foreign-travel-advice/tunisia/health",
+        "https://wwwnc.cdc.gov/travel/destinations/traveler/none/tunisia",
+        "https://travelhealthpro.org.uk/country/224/tunisia",
+        "https://travel.gc.ca/destinations/tunisia"
+      ]
+    },
+    {
+      "id": "phone",
+      "icon": "📱",
+      "title": "Phone and internet",
+      "points": [
+        "Tunisia has three mobile operators: Ooredoo, Orange and Tunisie Telecom.",
+        "All three have counters in the arrivals hall at Tunis–Carthage airport, and their shops in town also sell prepaid SIMs (ask for a \"carte prépayée\").",
+        "You need your physical passport to buy a SIM card; a photocopy or ID card is not accepted.",
+        "Travel eSIMs that use local networks can be installed before you leave home.",
+        "Tunis–Carthage airport has free Wi-Fi, and hotels and cafés in cities often offer Wi-Fi.",
+        "The country code is +216, followed by an eight-digit number."
+      ],
+      "sources": [
+        "https://www.esim.net/guides/tunisia-sim-card-guide",
+        "https://carthagemagazine.com/prepaid-sim-card-in-tunisia/",
+        "https://en.wikivoyage.org/wiki/Tunisia",
+        "https://discovertunisia.com/en/node/158"
+      ]
+    },
+    {
+      "id": "power",
+      "icon": "🔌",
+      "title": "Electricity",
+      "points": [
+        "Mains power is 230 V, 50 Hz.",
+        "Sockets take plug types C and E (two round pins), so a standard continental European adaptor works.",
+        "Summer heat can cause short power cuts that also affect air conditioning, mobile networks and card payments."
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mains_electricity_by_country",
+        "https://www.discovertunisia.com/uk/en/node/323",
+        "https://www.gov.uk/foreign-travel-advice/tunisia/safety-and-security"
+      ]
+    },
+    {
+      "id": "emergency",
+      "icon": "🚨",
+      "title": "Emergency numbers",
+      "points": [
+        "Police (towns and cities): 197.",
+        "National Guard (rural areas and small villages): 193.",
+        "Ambulance / medical emergency: 190.",
+        "Fire brigade and road accidents: 198.",
+        "If you lose your passport or need consular help, contact your embassy in Tunis."
+      ],
+      "sources": [
+        "https://www.gov.uk/foreign-travel-advice/tunisia/getting-help",
+        "https://travel.gc.ca/destinations/tunisia",
+        "https://discovertunisia.com/en/node/158"
+      ]
+    },
+    {
+      "id": "airports",
+      "icon": "✈️",
+      "title": "Getting from the airport",
+      "points": [
+        "Tunis–Carthage: bus 635 runs to Tunis Marine in the city centre roughly every 30–40 minutes in the daytime; pay cash on board. The stop is a short walk from the terminal.",
+        "Tunis–Carthage: yellow taxis wait outside the terminal; ask for the meter or agree the fare before you get in, and pay in cash. Ride apps such as InDrive and Yassir also work.",
+        "Enfidha–Hammamet: the airport has no train station. Taxis wait outside but usually do not use meters, so agree the price first; a public bus runs about hourly to Enfidha town only.",
+        "Enfidha–Hammamet: if you booked a package holiday, the tour operator's transfer is usually included.",
+        "Monastir: the Sahel Metro station is about 150 m from the terminal, with trains to Monastir, Sousse (Bab Jedid station) and Mahdia. Buy tickets in cash from the conductor.",
+        "Monastir: yellow taxis wait outside the terminal; they rarely use meters, so agree the fare first.",
+        "Djerba: taxis are the main option from the airport to Houmt Souk and the hotels; ask the driver to use the meter."
+      ],
+      "sources": [
+        "https://www.cestee.com/airport/tunis-tun/transport",
+        "https://www.cestee.com/airport/enfidha-nbe/transport",
+        "https://www.cestee.com/airport/monastir-mir/transport",
+        "https://habibbourguibaairport.com/en-EN/to-from-the-airport/page/rail-transportation",
+        "https://en.wikivoyage.org/wiki/Djerba"
+      ]
+    },
+    {
+      "id": "transport",
+      "icon": "🚐",
+      "title": "Getting around",
+      "points": [
+        "Louages are shared minibuses on fixed routes between towns. They leave from louage stations when every seat is full, not on a timetable, and fares are fixed, so there is no need to bargain.",
+        "A louage's stripe shows its range: red for long-distance, blue for regional and yellow for local routes.",
+        "SNCFT trains run south from Tunis to Sousse, Monastir and Sfax; delays and cancellations are common, so allow extra time.",
+        "The Sahel Metro (run by SNCFT) links Sousse, Monastir airport, Monastir and Mahdia.",
+        "In Tunis, the TGM light railway runs from Tunis Marine to La Marsa via La Goulette, Carthage and Sidi Bou Said.",
+        "Yellow taxis are the easiest way to get around town; ask for the meter, and expect extra charges for luggage or at night.",
+        "Traffic drives on the right. Car hire is available at airports and in town.",
+        "Bring your national driving licence and an International Driving Permit. Police often stop rental cars at checkpoints, so keep your ID and papers handy.",
+        "Take care on the roads at night: lighting is poor, livestock and pedestrians are common, and speed bumps are often unmarked."
+      ],
+      "sources": [
+        "https://en.wikivoyage.org/wiki/Tunisia",
+        "https://en.wikipedia.org/wiki/Louage",
+        "https://www.lonelyplanet.com/articles/getting-around-tunisia",
+        "https://en.wikipedia.org/wiki/Sahel_Metro",
+        "https://en.wikipedia.org/wiki/Tunis-Goulette-Marsa",
+        "https://www.discovertunisia.com/uk/en/node/323",
+        "https://www.gov.uk/foreign-travel-advice/tunisia/safety-and-security",
+        "https://travel.gc.ca/destinations/tunisia"
+      ]
+    },
+    {
+      "id": "etiquette",
+      "icon": "🤝",
+      "title": "Customs and etiquette",
+      "points": [
+        "Beachwear is fine at resorts, but dress modestly in towns, at religious sites and in rural areas; the south is more conservative.",
+        "Most working mosques are closed to non-Muslims. The courtyards of the Great Mosques of Kairouan, Sousse and Mahdia can be visited for a fee; the prayer halls are for Muslims only.",
+        "The Zitouna Mosque in Tunis has not admitted non-Muslim visitors in recent years.",
+        "Mosque visiting hours are limited and change around prayer times, especially at Friday midday prayers; dress modestly and check locally.",
+        "Do not photograph government buildings, military sites, police or security installations, and ask before photographing people.",
+        "Alcohol is served in licensed hotels, bars and restaurants, but supermarkets do not sell it on Fridays or during Ramadan.",
+        "Bargaining is normal in the souks; prices in modern shops are fixed. State-run craft shops sell at fixed prices and are a useful price guide.",
+        "Tipping around 10% in restaurants is customary, ideally in cash so the waiter gets it; drivers and guides are also tipped.",
+        "Drug laws are strict and penalties are severe."
+      ],
+      "sources": [
+        "https://www.gov.uk/foreign-travel-advice/tunisia/safety-and-security",
+        "https://en.wikivoyage.org/wiki/Tunisia",
+        "https://www.webdo.tn/fr/actualite/chroniques/pourquoi-les-mosquees-sont-elles-fermees-aux-non-musulmans/206436/",
+        "https://travel.gc.ca/destinations/tunisia",
+        "https://worldtravelguide.net/guides/africa/tunisia/tunis/shopping",
+        "https://carthagemagazine.com/what-to-buy-in-tunisia/",
+        "https://www.discovertunisia.com/uk/en/node/323"
+      ]
+    },
+    {
+      "id": "calendar",
+      "icon": "📅",
+      "title": "Time, holidays and Ramadan",
+      "points": [
+        "Tunisia is on GMT+1 all year with no daylight saving time: the same time as the UK in summer and one hour ahead in winter.",
+        "Ramadan 2027 is expected from about 7–8 February to about 8 March; Ramadan 2028 from about 28 January to about 25 February. Exact dates depend on the moon sighting.",
+        "Fixed public holidays: 1 January (New Year), 20 March (Independence Day), 9 April (Martyrs' Day), 1 May (Labour Day), 25 July (Republic Day), 13 August (Women's Day), 15 October (Evacuation Day) and 17 December (Revolution and Youth Day).",
+        "Moving religious holidays follow the Islamic calendar: Eid al-Fitr (end of Ramadan), Eid al-Adha, Islamic New Year and the Prophet's Birthday (Mawlid).",
+        "Approximate 2027 dates: Eid al-Fitr about 9 March, Eid al-Adha about 16 May, Islamic New Year about 6 June and Mawlid about 14 August.",
+        "During Ramadan many restaurants close until sunset, and supermarkets do not sell alcohol, though hotels and bars can still serve it.",
+        "During Ramadan, avoid eating, drinking or smoking in public in daytime, and dress more conservatively."
+      ],
+      "sources": [
+        "https://discovertunisia.com/en/node/158",
+        "https://www.discovertunisia.com/uk/en/node/323",
+        "https://en.wikipedia.org/wiki/Ramadan",
+        "https://travel.gc.ca/destinations/tunisia",
+        "https://en.wikipedia.org/wiki/Public_holidays_in_Tunisia",
+        "https://www.timeanddate.com/holidays/tunisia/2027",
+        "https://www.gov.uk/foreign-travel-advice/tunisia/safety-and-security",
+        "https://en.wikivoyage.org/wiki/Tunisia"
+      ]
+    },
+    {
+      "id": "language",
+      "icon": "🗣️",
+      "title": "Language",
+      "points": [
+        "Arabic is the official language. In everyday life people speak Tunisian Arabic, called Tounsi or Derja.",
+        "French is widely spoken, especially in business and with visitors, and most signs are in Arabic and French.",
+        "English is used in hotels and tourist areas but less elsewhere; Italian is common in some coastal towns."
+      ],
+      "sources": [
+        "https://discovertunisia.com/en/node/158",
+        "https://en.wikipedia.org/wiki/Tunisian_Arabic",
+        "https://en.wikivoyage.org/wiki/Tunisia"
+      ]
+    }
+  ]
+}

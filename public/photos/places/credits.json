@@ -1,0 +1,338 @@
+{
+  "kerkouane": {
+    "file": "photos/places/kerkouane.jpg",
+    "author": "CarlesVA on ca.wikipedia or eo.wikipedia",
+    "license": "Public domain",
+    "license_url": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Kerkouane_-_panorama.jpg",
+    "title": "Kerkouane - panorama.jpg"
+  },
+  "monastir": {
+    "file": "photos/places/monastir.jpg",
+    "author": "Mohamed Ezzi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grand_Ribat_Monastir.JPG",
+    "title": "Grand Ribat Monastir.JPG"
+  },
+  "mahdia": {
+    "file": "photos/places/mahdia.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Costa_de_Mahdia,_T%C3%BAnez,_2016-09-03,_DD_07.jpg",
+    "title": "Costa de Mahdia, Túnez, 2016-09-03, DD 07.jpg"
+  },
+  "le-kef": {
+    "file": "photos/places/le-kef.jpg",
+    "author": "Alexandre Moreau",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Kef_roman_baths,_mosque_and_casbah.jpg",
+    "title": "El Kef roman baths, mosque and casbah.jpg"
+  },
+  "testour": {
+    "file": "photos/places/testour.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grande_Mosqu%C3%A9e_de_Testour_02.JPG",
+    "title": "Grande Mosquée de Testour 02.JPG"
+  },
+  "zaghouan": {
+    "file": "photos/places/zaghouan.jpg",
+    "author": "Rbsangelo",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Right_sided_shot_of_the_Water_Temple_of_Zaghouan..JPG",
+    "title": "Right sided shot of the Water Temple of Zaghouan..JPG"
+  },
+  "thuburbo-majus": {
+    "file": "photos/places/thuburbo-majus.jpg",
+    "author": "Krabaa.anis",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thuburbo_Majus,_h%C3%A9ritage_de_l%27Afrique_romaine_36.jpg",
+    "title": "Thuburbo Majus, héritage de l'Afrique romaine 36.jpg"
+  },
+  "oudhna": {
+    "file": "photos/places/oudhna.jpg",
+    "author": "Rais67",
+    "license": "Public domain",
+    "license_url": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Oudhna_Capitole_1.JPG",
+    "title": "Oudhna Capitole 1.JPG"
+  },
+  "makthar": {
+    "file": "photos/places/makthar.jpg",
+    "author": "Pradigue",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Makthar_arc_Trajan.jpg",
+    "title": "Makthar arc Trajan.jpg"
+  },
+  "bardo": {
+    "file": "photos/places/bardo.jpg",
+    "author": "Herbert Frank from Wien (Vienna), AT",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunis,_Museum_Bardo.jpg",
+    "title": "Tunis, Museum Bardo.jpg"
+  },
+  "chenini": {
+    "file": "photos/places/chenini.jpg",
+    "author": "Wikitestaccountlogin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chenini_2021.jpg",
+    "title": "Chenini 2021.jpg"
+  },
+  "chemtou": {
+    "file": "photos/places/chemtou.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aqueduct_of_Chemtou_02.jpg",
+    "title": "Aqueduct of Chemtou 02.jpg"
+  },
+  "hammamet": {
+    "file": "photos/places/hammamet.jpg",
+    "author": "Георгий Долгопский",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Medina_of_Hammamet_(Hammamet).JPG",
+    "title": "Medina of Hammamet (Hammamet).JPG"
+  },
+  "tabarka": {
+    "file": "photos/places/tabarka.jpg",
+    "author": "Noomen9",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ile_de_tabarka_1.jpg",
+    "title": "Ile de tabarka 1.jpg"
+  },
+  "ghar-el-melh": {
+    "file": "photos/places/ghar-el-melh.jpg",
+    "author": "Citizen59",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:VieuxPortEtArsenal.JPG",
+    "title": "VieuxPortEtArsenal.JPG"
+  },
+  "raf-raf": {
+    "file": "photos/places/raf-raf.jpg",
+    "author": "El Golli Mohamed",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Paysage_Rafraf2.jpg",
+    "title": "Paysage Rafraf2.jpg"
+  },
+  "la-marsa": {
+    "file": "photos/places/la-marsa.jpg",
+    "author": "DrFO.Jr.Tn",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Corniche_La_Marsa_Plage_2.jpg",
+    "title": "Corniche La Marsa Plage 2.jpg"
+  },
+  "kantaoui": {
+    "file": "photos/places/kantaoui.jpg",
+    "author": "Tony Hisgett",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Port_El_Kantaoui_Marina,_Sousse.jpg",
+    "title": "Port El Kantaoui Marina, Sousse.jpg"
+  },
+  "kerkennah": {
+    "file": "photos/places/kerkennah.jpg",
+    "author": "Faouz Kilani",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kerkennah_Island.jpg",
+    "title": "Kerkennah Island.jpg"
+  },
+  "djerba-beach": {
+    "file": "photos/places/djerba-beach.jpg",
+    "author": "Khemirasameh",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Djerba_plage.jpg",
+    "title": "Djerba plage.jpg"
+  },
+  "zarzis": {
+    "file": "photos/places/zarzis.jpg",
+    "author": "El Golli Mohamed",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Zarzis_plage.jpg",
+    "title": "Zarzis plage.jpg"
+  },
+  "korbous": {
+    "file": "photos/places/korbous.jpg",
+    "author": "Smailtn",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Les_c%C3%B4tes_de_Korbous_Takelsa.jpg",
+    "title": "Les côtes de Korbous Takelsa.jpg"
+  },
+  "ichkeul": {
+    "file": "photos/places/ichkeul.jpg",
+    "author": "No machine-readable author provided. Dhfaouzi assumed (based on copyright claims).",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Vue_matinale_de_la_montagne_dominant_le_parc_Ichkeul.jpg",
+    "title": "Vue matinale de la montagne dominant le parc Ichkeul.jpg"
+  },
+  "ain-draham": {
+    "file": "photos/places/ain-draham.jpg",
+    "author": "Noussawolf1",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ai_9.jpg",
+    "title": "Ai 9.jpg"
+  },
+  "el-haouaria": {
+    "file": "photos/places/el-haouaria.jpg",
+    "author": "Majbri wael",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grottes_El_Haouaria_01.jpg",
+    "title": "Grottes El Haouaria 01.jpg"
+  },
+  "cape-angela": {
+    "file": "photos/places/cape-angela.jpg",
+    "author": "DrFO.Jr.Tn",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cap_Angela.jpg",
+    "title": "Cap Angela.jpg"
+  },
+  "chambi": {
+    "file": "photos/places/chambi.jpg",
+    "author": "Nabucodonosor",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chambi1.JPG",
+    "title": "Chambi1.JPG"
+  },
+  "bou-hedma": {
+    "file": "photos/places/bou-hedma.jpg",
+    "author": "El Golli Mohamed",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Parc_national_de_Bouhedma.jpg",
+    "title": "Parc national de Bouhedma.jpg"
+  },
+  "zembra": {
+    "file": "photos/places/zembra.jpg",
+    "author": "Smailtn",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%C3%8Fle_Zembra.jpg",
+    "title": "Ïle Zembra.jpg"
+  },
+  "jugurtha": {
+    "file": "photos/places/jugurtha.jpg",
+    "author": "Ahmedettoro",
+    "license": "Public domain",
+    "license_url": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Table_de_Jughurta.JPG",
+    "title": "Table de Jughurta.JPG"
+  },
+  "tozeur": {
+    "file": "photos/places/tozeur.jpg",
+    "author": "Largoplazo",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:More_brickwork_Tozeur_Medina.jpg",
+    "title": "More brickwork Tozeur Medina.jpg"
+  },
+  "nefta": {
+    "file": "photos/places/nefta.jpg",
+    "author": "Rawen Ab",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Corbeille_de_Nefta_-_Tozeur,_Tunisia_02.jpg",
+    "title": "Corbeille de Nefta - Tozeur, Tunisia 02.jpg"
+  },
+  "chebika": {
+    "file": "photos/places/chebika.jpg",
+    "author": "Remi Jouan",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chebika_(2).JPG",
+    "title": "Chebika (2).JPG"
+  },
+  "tamerza": {
+    "file": "photos/places/tamerza.jpg",
+    "author": "Dennis G. Jarvis",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Waterfalls_-_Tamerza,_Tunisia_-_17_May_2012_-_(1).jpg",
+    "title": "Waterfalls - Tamerza, Tunisia - 17 May 2012 - (1).jpg"
+  },
+  "mides": {
+    "file": "photos/places/mides.jpg",
+    "author": "McKay Savage",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mides_Canyon.jpg",
+    "title": "Mides Canyon.jpg"
+  },
+  "chott-el-djerid": {
+    "file": "photos/places/chott-el-djerid.jpg",
+    "author": "Kais photographies",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chott_Djerid_003.jpg",
+    "title": "Chott Djerid 003.jpg"
+  },
+  "douz": {
+    "file": "photos/places/douz.jpg",
+    "author": "McKay Savage from London, UK",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunisia_10-12_-_064_-_Douz_and_the_Festival_of_the_Sahara_(6609290791).jpg",
+    "title": "Tunisia 10-12 - 064 - Douz and the Festival of the Sahara (6609290791).jpg"
+  },
+  "ksar-ghilane": {
+    "file": "photos/places/ksar-ghilane.jpg",
+    "author": "Jérôme Prax jeromeprax",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Ksar_Ghilane,_Tunisia_(Unsplash).jpg",
+    "title": "Ksar Ghilane, Tunisia (Unsplash).jpg"
+  },
+  "ong-jemel": {
+    "file": "photos/places/ong-jemel.jpg",
+    "author": "Habib M'henni",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mos_Espa,_site_du_tournage_de_Starwars,_Tunisie,_20220324_112705.jpg",
+    "title": "Mos Espa, site du tournage de Starwars, Tunisie, 20220324 112705.jpg"
+  },
+  "selja": {
+    "file": "photos/places/selja.jpg",
+    "author": "No machine-readable author provided. Elcèd77 assumed (based on copyright claims).",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_l%C3%A9zard_rouge_(11).jpg",
+    "title": "Le lézard rouge (11).jpg"
+  },
+  "kelibia": {
+    "file": "photos/places/kelibia.jpg",
+    "author": "Noomen9",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Fort_de_kelibia_(41203).jpg",
+    "title": "Fort de kelibia (41203).jpg"
+  },
+  "mahdia-beach": {
+    "file": "photos/places/mahdia-beach.jpg",
+    "author": "Jihed M'hamed",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mahdia_Beach_-_Plage_Mahdia_-_El_Corniche_-_El_Skala_5.jpg",
+    "title": "Mahdia Beach - Plage Mahdia - El Corniche - El Skala 5.jpg"
+  }
+}

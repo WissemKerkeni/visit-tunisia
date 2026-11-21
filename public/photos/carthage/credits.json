@@ -1,0 +1,58 @@
+{
+  "column": {
+    "file": "photos/carthage/column.jpg",
+    "author": "Gigi sorrentino",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colonne_romaine.JPG",
+    "title": "Colonne romaine.JPG"
+  },
+  "vaults": {
+    "file": "photos/carthage/vaults.jpg",
+    "author": "NikyLovesMonuments",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thermes_d%27Antonin_6.JPG",
+    "title": "Thermes d'Antonin 6.JPG"
+  },
+  "latrines": {
+    "file": "photos/carthage/latrines.jpg",
+    "author": "Pradigue",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Thermes_Antonin_latrines_nord_Carthage.jpg",
+    "title": "Thermes Antonin latrines nord Carthage.jpg"
+  },
+  "theatre": {
+    "file": "photos/carthage/theatre.jpg",
+    "author": "Sinda BF",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Theatre_de_Carthage(1).jpg",
+    "title": "Theatre de Carthage(1).jpg"
+  },
+  "cathedral": {
+    "file": "photos/carthage/cathedral.jpg",
+    "author": "Noomen9",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_de_Saint_Louis_de_Carthage_(99152).jpg",
+    "title": "Cathédrale de Saint Louis de Carthage (99152).jpg"
+  },
+  "punic": {
+    "file": "photos/carthage/punic.jpg",
+    "author": "Sinda BF",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Musee_National_de_Carthage(5).jpg",
+    "title": "Musee National de Carthage(5).jpg"
+  },
+  "villa": {
+    "file": "photos/carthage/villa.jpg",
+    "author": "Rais67",
+    "license": "Public domain",
+    "license_url": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunis_Carthage_Villa_romaine_3.jpg",
+    "title": "Tunis Carthage Villa romaine 3.jpg"
+  }
+}

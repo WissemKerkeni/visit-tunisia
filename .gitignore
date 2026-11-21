@@ -1,0 +1,12 @@
+node_modules
+.env.local
+.env.*.local
+dist
+references/textures-2k
+snapshots
+*.log
+.DS_Store
+.idea/
+# downloaded caches, rebuilt by the scripts (make-village.mjs, make-atlas.mjs)
+references/*/terrain-tiles/
+references/atlas/terrain-*.png

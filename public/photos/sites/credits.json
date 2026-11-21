@@ -1,0 +1,90 @@
+{
+  "sidi-bou-said": {
+    "file": "photos/sites/sidi-bou-said.jpg",
+    "author": "Habib M'henni",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sidi_Bou_Said,_Tunisia,_19_March_2018_DSC_8004.jpg",
+    "title": "Sidi Bou Said, Tunisia, 19 March 2018 DSC 8004.jpg"
+  },
+  "carthage": {
+    "file": "photos/sites/carthage.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Antonine_Baths.jpg",
+    "title": "Antonine Baths.jpg"
+  },
+  "tunis-medina": {
+    "file": "photos/sites/tunis-medina.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Minaret_of_Mosque_Zitouna.jpg",
+    "title": "Minaret of Mosque Zitouna.jpg"
+  },
+  "dougga": {
+    "file": "photos/sites/dougga.jpg",
+    "author": "Elena Tatiana Chis",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dougga_-_Theatre_view_from_above.jpg",
+    "title": "Dougga - Theatre view from above.jpg"
+  },
+  "bulla-regia": {
+    "file": "photos/sites/bulla-regia.jpg",
+    "author": "Gigi sorrentino",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colonne_casa_della_caccia.JPG",
+    "title": "Colonne casa della caccia.JPG"
+  },
+  "kairouan": {
+    "file": "photos/sites/kairouan.jpg",
+    "author": "Elena Tatiana Chis",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Kairouan_-_inner_view.jpg",
+    "title": "Great Mosque of Kairouan - inner view.jpg"
+  },
+  "sousse": {
+    "file": "photos/sites/sousse.jpg",
+    "author": "Christian Manhart",
+    "license": "CC BY-SA 3.0 igo",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Medina_of_Sousse-130323.jpg",
+    "title": "Medina of Sousse-130323.jpg"
+  },
+  "sbeitla": {
+    "file": "photos/sites/sbeitla.jpg",
+    "author": "Carole Raddato",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sufetula,_Sbeitla,_Tunisia_-_52702791401.jpg",
+    "title": "Sufetula, Sbeitla, Tunisia - 52702791401.jpg"
+  },
+  "matmata": {
+    "file": "photos/sites/matmata.jpg",
+    "author": "Yamen",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Buildings_in_caves_Matmata_011.jpg",
+    "title": "Buildings in caves Matmata 011.jpg"
+  },
+  "djerba": {
+    "file": "photos/sites/djerba.jpg",
+    "author": "Skander zarrad",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Synagogue_de_la_Hara-Srira_vue_2.jpg",
+    "title": "Synagogue de la Hara-Srira vue 2.jpg"
+  },
+  "ksar-ouled-soltane": {
+    "file": "photos/sites/ksar-ouled-soltane.jpg",
+    "author": "Ovva olfa",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ksar_Ouled_Soltane_31.jpg",
+    "title": "Ksar Ouled Soltane 31.jpg"
+  }
+}

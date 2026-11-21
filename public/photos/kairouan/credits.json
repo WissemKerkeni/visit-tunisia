@@ -1,0 +1,66 @@
+{
+  "minaret": {
+    "file": "photos/kairouan/minaret.jpg",
+    "author": "Skander zarrad",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_Okba_Ibn_Nafaa_-_vue_cours.jpg",
+    "title": "Mosquée Okba Ibn Nafaa - vue cours.jpg"
+  },
+  "court": {
+    "file": "photos/kairouan/court.jpg",
+    "author": "Dennis G. Jarvis",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Kairouan,_courtyard_and_prayer_hall_facade.jpg",
+    "title": "Great Mosque of Kairouan, courtyard and prayer hall facade.jpg"
+  },
+  "prayer": {
+    "file": "photos/kairouan/prayer.jpg",
+    "author": "Skander zarrad",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Interieur_Grande_Mosqu%C3%A9e_de_Kairouan_-_vue_Mihrab.jpg",
+    "title": "Interieur Grande Mosquée de Kairouan - vue Mihrab.jpg"
+  },
+  "basins": {
+    "file": "photos/kairouan/basins.jpg",
+    "author": "Cimoi",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bassin_Kairouan.jpg",
+    "title": "Bassin Kairouan.jpg"
+  },
+  "sahab": {
+    "file": "photos/kairouan/sahab.jpg",
+    "author": "John Whitaker",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Courtyard_Sidi_Sahbi.jpg",
+    "title": "Courtyard Sidi Sahbi.jpg"
+  },
+  "threedoors": {
+    "file": "photos/kairouan/threedoors.jpg",
+    "author": "Rusty Clark",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Three_Doors_Mosque_Facade_at_Kairouan.jpg",
+    "title": "Three Doors Mosque Facade at Kairouan.jpg"
+  },
+  "barouta": {
+    "file": "photos/kairouan/barouta.jpg",
+    "author": "Fehmi bouguezzi",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bir_Barrouta_03.JPG",
+    "title": "Bir Barrouta 03.JPG"
+  },
+  "gate": {
+    "file": "photos/kairouan/gate.jpg",
+    "author": "Mietek Ł",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunezja,_Kairouan,_Place_des_Martyres_-_panoramio_(1).jpg",
+    "title": "Tunezja, Kairouan, Place des Martyres - panoramio (1).jpg"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "dishes": [
+    {
+      "id": "couscous",
+      "name": "Couscous",
+      "ar": "كسكسي",
+      "where": "everywhere in Tunisia",
+      "text": "Called kosksi at home, this is hand-rolled semolina steamed over a pot of stew and served with vegetables and meat or fish that change with the region, the season and the occasion. It's the dish of sharing and togetherness, and since 2020 its know-how has been on UNESCO's intangible heritage list, a joint listing with Algeria, Mauritania and Morocco.",
+      "source": "https://ich.unesco.org/en/RL/couscous-mediterranean-01602"
+    },
+    {
+      "id": "brik",
+      "name": "Brik",
+      "ar": "بريك",
+      "where": null,
+      "text": "A paper-thin sheet of malsouka pastry folded into a triangle around a filling and fried until crisp. The classic version hides a whole egg with tuna, onion, parsley and harissa. Other fillings include minced meat, chicken or cheese.",
+      "source": "https://en.wikipedia.org/wiki/Brik"
+    },
+    {
+      "id": "lablabi",
+      "name": "Lablabi",
+      "ar": "لبلابي",
+      "where": null,
+      "text": "Chickpeas in a garlic and cumin broth, poured over chunks of stale bread and topped with harissa, olive oil, egg, capers, tuna or a squeeze of lemon. It started as a winter breakfast but is now eaten all day, all year, including as a late-night meal.",
+      "source": "https://en.wikipedia.org/wiki/Lablabi"
+    },
+    {
+      "id": "ojja",
+      "name": "Ojja",
+      "ar": "عجة",
+      "where": null,
+      "text": "Eggs cooked in a spicy sauce of tomatoes, green chillies and harissa, often with meat such as merguez sausage. It looks like shakshouka but is its own dish. Mop it up with bread.",
+      "source": "https://en.wikipedia.org/wiki/Tunisian_cuisine"
+    },
+    {
+      "id": "kafteji",
+      "name": "Kafteji",
+      "ar": "كفتاجي",
+      "where": "Kairouan and Tunis, each with its own version",
+      "text": "Fried vegetables such as peppers and tomatoes, chopped together and mixed with eggs, then eaten by dipping bread into it rather than using a fork. The Kairouan version is very spicy and mostly peppers, while the Tunis version adds pumpkin.",
+      "source": "https://lepetitjournal.com/tunis/a-voir-a-faire/gastronomie-lincontournable-kafteji-53945"
+    },
+    {
+      "id": "harissa",
+      "name": "Harissa",
+      "ar": "هريسة",
+      "where": "Cap Bon, especially Nabeul",
+      "text": "Tunisia's chilli paste: sun-dried peppers ground with salt, garlic and coriander, then kept in glass or clay jars. It seasons everyday food, is often made by women together with family or neighbours, and was added to UNESCO's intangible heritage list in 2022.",
+      "source": "https://ich.unesco.org/en/RL/harissa-knowledge-skills-and-culinary-and-social-practices-01710"
+    },
+    {
+      "id": "mloukhia",
+      "name": "Mloukhia",
+      "ar": "ملوخية",
+      "where": null,
+      "text": "A dark green sauce made from dried, finely powdered mulukhiyah leaves cooked in olive oil with big chunks of beef or lamb, simmered slowly until thick. It's served in small deep plates and eaten with hearty traditional bread.",
+      "source": "https://en.wikipedia.org/wiki/Mulukhiyah"
+    },
+    {
+      "id": "makroudh",
+      "name": "Makroudh",
+      "ar": "مقروض",
+      "where": "Kairouan",
+      "text": "Small diamond-shaped semolina cakes stuffed with dates, or sometimes almonds. They come from Kairouan, which hosted Tunisia's first national makroud festival in 2008.",
+      "source": "https://carthagemagazine.com/tunisian-makroudh/"
+    },
+    {
+      "id": "bambalouni",
+      "name": "Bambalouni",
+      "ar": "بمبالوني",
+      "where": "Sidi Bou Said",
+      "text": "A fried Tunisian doughnut, dusted with sugar or soaked in honey and eaten at any time of day. Sidi Bou Said is famous for it, and vendors there sell it in large numbers to locals and visitors.",
+      "source": "https://en.wikipedia.org/wiki/Bambalouni"
+    },
+    {
+      "id": "tea-pine-nuts",
+      "name": "Mint tea with pine nuts",
+      "ar": "شاي بالصنوبر",
+      "where": null,
+      "text": "Sweet mint tea poured over a spoonful of pine nuts in the glass. It's served at weddings, family gatherings and get-togethers with friends, and almonds or roasted peanuts sometimes replace the pine nuts.",
+      "source": "https://en.wikipedia.org/wiki/Tea_with_pine_nuts"
+    },
+    {
+      "id": "fricasse",
+      "name": "Fricassé",
+      "ar": "فريكاسي",
+      "where": null,
+      "text": "A small fried bread roll, split open and filled with tuna, hard-boiled egg, mashed potato, olives, capers, preserved lemon and harissa. You'll find it at traditional snack vendors, and people also make it at home.",
+      "source": "https://en.wikipedia.org/wiki/Fricasse"
+    },
+    {
+      "id": "chakchouka",
+      "name": "Chakchouka",
+      "ar": "شكشوكة",
+      "where": null,
+      "text": "The name means \"mixed\" in Tunisian Arabic: a stew of tomatoes, peppers, onions and garlic, often served with eggs. Tunisian cooks may add potatoes, broad beans, artichoke hearts or courgettes.",
+      "source": "https://en.wikipedia.org/wiki/Shakshouka"
+    },
+    {
+      "id": "deglet-nour",
+      "name": "Deglet Nour dates",
+      "ar": "دقلة نور",
+      "where": "the Djerid and Nefzaoua oases",
+      "text": "Soft, translucent, honey-sweet dates whose name is often read as \"date of light\". In Tunisia they grow in the desert oases of the Djerid and Nefzaoua, and they are also the classic filling for makroudh.",
+      "source": "https://en.wikipedia.org/wiki/Deglet_Nour"
+    },
+    {
+      "id": "olive-oil",
+      "name": "Tunisian olive oil",
+      "ar": "زيت زيتون",
+      "where": "Sfax",
+      "text": "Olive farming is central to life around Sfax, which makes about 40% of Tunisia's olive oil. Already in the 12th century, the geographer al-Idrisi praised Sfax's olives and oil as unique.",
+      "source": "https://en.wikipedia.org/wiki/Sfax"
+    }
+  ],
+  "phrases": [
+    { "tr": "Aslema", "ar": "عالسلامة", "en": "Hello" },
+    { "tr": "Sbah el khir", "ar": "صباح الخير", "en": "Good morning" },
+    { "tr": "Msa el khir", "ar": "مسا الخير", "en": "Good evening" },
+    { "tr": "Labes?", "ar": "لاباس؟", "en": "How are you? / I'm fine" },
+    { "tr": "Yaishek", "ar": "يعيشك", "en": "Thank you" },
+    { "tr": "Min fadhlek", "ar": "من فضلك", "en": "Please" },
+    { "tr": "Ey", "ar": "إيه", "en": "Yes" },
+    { "tr": "Le", "ar": "لا", "en": "No" },
+    { "tr": "Le, yaishek", "ar": "لا، يعيشك", "en": "No, thank you" },
+    { "tr": "Behi", "ar": "باهي", "en": "OK / good" },
+    { "tr": "Samahni", "ar": "سامحني", "en": "Excuse me / sorry" },
+    { "tr": "Mafhemtech", "ar": "ما فهمتش", "en": "I don't understand" },
+    { "tr": "Tahki inglizi?", "ar": "تحكي إنڨليزي؟", "en": "Do you speak English?" },
+    { "tr": "Nheb…", "ar": "نحب…", "en": "I'd like…" },
+    { "tr": "Bqaddech?", "ar": "بقدّاش؟", "en": "How much?" },
+    { "tr": "Ghali barcha", "ar": "غالي برشة", "en": "That's too expensive" },
+    { "tr": "Barcha", "ar": "برشة", "en": "A lot / very" },
+    { "tr": "Win el…?", "ar": "وين الـ…؟", "en": "Where is the…?" },
+    { "tr": "Ma", "ar": "ماء", "en": "Water" },
+    { "tr": "Bnin!", "ar": "بنين", "en": "Delicious!" },
+    { "tr": "El hsab, yaishek", "ar": "الحساب يعيشك", "en": "The bill, please" },
+    { "tr": "Beslema", "ar": "بالسلامة", "en": "Goodbye" }
+  ],
+  "phraseSources": [
+    "https://en.wikivoyage.org/wiki/Tunisian_Arabic_phrasebook",
+    "https://en.wikipedia.org/wiki/Tunisian_Arabic",
+    "https://carthagemagazine.com/tunisian-arabic-phrases/",
+    "https://engagingcultures.com/7-useful-arabic-phrases-for-traveling-in-tunisia/"
+  ]
+}

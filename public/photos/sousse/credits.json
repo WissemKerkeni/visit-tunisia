@@ -1,0 +1,66 @@
+{
+  "ribat": {
+    "file": "photos/sousse/ribat.jpg",
+    "author": "Noomen9",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ribat_de_Sousse_2.jpg",
+    "title": "Ribat de Sousse 2.jpg"
+  },
+  "ribatcourt": {
+    "file": "photos/sousse/ribatcourt.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ribat_of_Sousse.jpg",
+    "title": "Ribat of Sousse.jpg"
+  },
+  "mosque": {
+    "file": "photos/sousse/mosque.jpg",
+    "author": "Fehmi bouguezzi",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grande_mosqu%C3%A9e_de_Sousse_04.JPG",
+    "title": "Grande mosquée de Sousse 04.JPG"
+  },
+  "kasbah": {
+    "file": "photos/sousse/kasbah.jpg",
+    "author": "Slim Alileche",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Qasbah_de_Sousse.JPG",
+    "title": "La Qasbah de Sousse.JPG"
+  },
+  "museum": {
+    "file": "photos/sousse/museum.jpg",
+    "author": "Carole Raddato",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sousse_Archaeological_Museum,_Tunisia.jpg",
+    "title": "Sousse Archaeological Museum, Tunisia.jpg"
+  },
+  "kobba": {
+    "file": "photos/sousse/kobba.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Bayn_el_Qah%C3%A2wi_1.jpg",
+    "title": "Café Bayn el Qahâwi 1.jpg"
+  },
+  "souks": {
+    "file": "photos/sousse/souks.jpg",
+    "author": "Poliphilo",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Sousse,_the_Medina_5.jpg",
+    "title": "Sousse, the Medina 5.jpg"
+  },
+  "gate": {
+    "file": "photos/sousse/gate.jpg",
+    "author": "Mietek Ł",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunezja,_Sousse_Medina_-_panoramio_(3).jpg",
+    "title": "Tunezja, Sousse Medina - panoramio (3).jpg"
+  }
+}

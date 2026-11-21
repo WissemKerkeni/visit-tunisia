@@ -1,0 +1,15 @@
+{
+  "name": "Visit Tunisia",
+  "short_name": "Visit Tunisia",
+  "description": "A living map of Tunisia: places, weather, festivals, itineraries, a travel guide and monuments in 3D.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1923",
+  "theme_color": "#0b1923",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

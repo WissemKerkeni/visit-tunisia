@@ -1,0 +1,56 @@
+[
+  {
+    "asset": "sandstone_blocks_05",
+    "name": "Sandstone Blocks 05",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/sandstone_blocks_05"
+  },
+  {
+    "asset": "rock_surface",
+    "name": "Rock Surface",
+    "authors": [
+      "Amal Kumar"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/rock_surface"
+  },
+  {
+    "asset": "dense_sand",
+    "name": "Dense Sand",
+    "authors": [
+      "Dimitrios Savva"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/dense_sand"
+  },
+  {
+    "asset": "medieval_blocks_05",
+    "name": "Medieval Blocks 05",
+    "authors": [
+      "Rob Tuytel"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/medieval_blocks_05"
+  },
+  {
+    "asset": "worn_asphalt",
+    "name": "Worn Asphalt",
+    "authors": [
+      "Amal Kumar"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/worn_asphalt"
+  },
+  {
+    "asset": "concrete_pavement",
+    "name": "Concrete Pavement",
+    "authors": [
+      "Charlotte Baglioni"
+    ],
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/concrete_pavement"
+  }
+]

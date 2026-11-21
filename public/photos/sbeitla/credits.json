@@ -1,0 +1,66 @@
+{
+  "temples": {
+    "file": "photos/sbeitla/temples.jpg",
+    "author": "Skander zarrad",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Site_archeologique_de_Sbeitla_-_vue_des_3_Temples_-_vue_de_face.jpg",
+    "title": "Site archeologique de Sbeitla - vue des 3 Temples - vue de face.jpg"
+  },
+  "antonine": {
+    "file": "photos/sbeitla/antonine.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arc_triomphal_d%27Antonin_et_de_Marc_Aur%C3%A8le.jpg",
+    "title": "Arc triomphal d'Antonin et de Marc Aurèle.jpg"
+  },
+  "tetrarchy": {
+    "file": "photos/sbeitla/tetrarchy.jpg",
+    "author": "Noomen9",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arc_de_sbeitla_2.jpg",
+    "title": "Arc de sbeitla 2.jpg"
+  },
+  "theatre": {
+    "file": "photos/sbeitla/theatre.jpg",
+    "author": "Dennis G. Jarvis",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sbeitla_Theatre.jpg",
+    "title": "Sbeitla Theatre.jpg"
+  },
+  "vitalis": {
+    "file": "photos/sbeitla/vitalis.jpg",
+    "author": "Dennis G. Jarvis",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sbeitla_Baptistry_Basin.jpg",
+    "title": "Sbeitla Baptistry Basin.jpg"
+  },
+  "bellator": {
+    "file": "photos/sbeitla/bellator.jpg",
+    "author": "Dennis G. Jarvis",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunisia-4332_-_Next_to_Basilica_(7860358218).jpg",
+    "title": "Tunisia-4332 - Next to Basilica (7860358218).jpg"
+  },
+  "baths": {
+    "file": "photos/sbeitla/baths.jpg",
+    "author": "Rais67",
+    "license": "Public domain",
+    "license_url": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunisie_Sbe%C3%AFtla_thermes_2.jpg",
+    "title": "Tunisie Sbeïtla thermes 2.jpg"
+  },
+  "fort": {
+    "file": "photos/sbeitla/fort.jpg",
+    "author": "Dennis G. Jarvis",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sbeitla_Byzantine_Fort.jpg",
+    "title": "Sbeitla Byzantine Fort.jpg"
+  }
+}

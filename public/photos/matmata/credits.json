@@ -1,0 +1,58 @@
+{
+  "sididriss": {
+    "file": "photos/matmata/sididriss.jpg",
+    "author": "Neil Rickards from Cambridge, England",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hotel_Sidi_Driss-underground_view_only.jpg",
+    "title": "Hotel Sidi Driss-underground view only.jpg"
+  },
+  "room": {
+    "file": "photos/matmata/room.jpg",
+    "author": "Habib M'henni",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_Sidi_Driss,_Starwars,_Tunisie,_20220325_141007.jpg",
+    "title": "Hôtel Sidi Driss, Starwars, Tunisie, 20220325 141007.jpg"
+  },
+  "sqifa": {
+    "file": "photos/matmata/sqifa.jpg",
+    "author": "Selmalak",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Maison_troglodytique,_Matmata.jpg",
+    "title": "Maison troglodytique, Matmata.jpg"
+  },
+  "khadija": {
+    "file": "photos/matmata/khadija.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Matmata_house.jpg",
+    "title": "Matmata house.jpg"
+  },
+  "ruin": {
+    "file": "photos/matmata/ruin.jpg",
+    "author": "Krabaa.anis",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Maison_troglodyte_%C3%A0_Matmata_1.jpg",
+    "title": "Maison troglodyte à Matmata 1.jpg"
+  },
+  "craters": {
+    "file": "photos/matmata/craters.jpg",
+    "author": "Jerzystrzelecki",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Surroundings_of_Matmata(js)3.jpg",
+    "title": "Surroundings of Matmata(js)3.jpg"
+  },
+  "mosque": {
+    "file": "photos/matmata/mosque.jpg",
+    "author": "Tanya Dedyukhina",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Matmata_-_panoramio_(14).jpg",
+    "title": "Matmata - panoramio (14).jpg"
+  }
+}

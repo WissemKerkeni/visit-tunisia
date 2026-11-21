@@ -1,0 +1,35 @@
+{
+ "le-kef": {
+  "i": 4,
+  "title": "File:El Kef roman baths, mosque and casbah.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/El_Kef_roman_baths%2C_mosque_and_casbah.jpg/500px-El_Kef_roman_baths%2C_mosque_and_casbah.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "author": "Alexandre Moreau",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:El_Kef_roman_baths,_mosque_and_casbah.jpg",
+  "w": 4310,
+  "h": 2868
+ },
+ "mahdia": {
+  "i": 5,
+  "title": "File:Costa de Mahdia, Túnez, 2016-09-03, DD 07.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Costa_de_Mahdia%2C_T%C3%BAnez%2C_2016-09-03%2C_DD_07.jpg/500px-Costa_de_Mahdia%2C_T%C3%BAnez%2C_2016-09-03%2C_DD_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "author": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Costa_de_Mahdia,_T%C3%BAnez,_2016-09-03,_DD_07.jpg",
+  "w": 4963,
+  "h": 3309
+ },
+ "testour": {
+  "i": 0,
+  "title": "File:Grande Mosquée de Testour 02.JPG",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Grande_Mosqu%C3%A9e_de_Testour_02.JPG/500px-Grande_Mosqu%C3%A9e_de_Testour_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "author": "IssamBarhoumi",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Grande_Mosqu%C3%A9e_de_Testour_02.JPG",
+  "w": 6000,
+  "h": 4000
+ }
+}

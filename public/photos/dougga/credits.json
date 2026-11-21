@@ -1,0 +1,66 @@
+{
+  "capitol": {
+    "file": "photos/dougga/capitol.jpg",
+    "author": "Mohamed Amine ABASSI",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dougga_Capitol.jpg",
+    "title": "Dougga Capitol.jpg"
+  },
+  "winds": {
+    "file": "photos/dougga/winds.jpg",
+    "author": "Noomen9",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Place_de_la_Rose_des_Vents.JPG",
+    "title": "Place de la Rose des Vents.JPG"
+  },
+  "theatre": {
+    "file": "photos/dougga/theatre.jpg",
+    "author": "Monaam Ben Fredj",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Theatre_of_Dougga,_Tunisia_5.jpg",
+    "title": "The Theatre of Dougga, Tunisia 5.jpg"
+  },
+  "juno": {
+    "file": "photos/dougga/juno.jpg",
+    "author": "Carole Raddato from FRANKFURT, Germany",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Temple_of_Juno_Caelestis_(222-235_AD),_Dougga_(8158878783).jpg",
+    "title": "Temple of Juno Caelestis (222-235 AD), Dougga (8158878783).jpg"
+  },
+  "mausoleum": {
+    "file": "photos/dougga/mausoleum.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Libyco-Punic_Mausoleum-_Dougga.jpg",
+    "title": "Libyco-Punic Mausoleum- Dougga.jpg"
+  },
+  "arch": {
+    "file": "photos/dougga/arch.jpg",
+    "author": "Institute for the Study of the Ancient World",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arch_of_Alexander_Severus_at_Dougga.jpg",
+    "title": "Arch of Alexander Severus at Dougga.jpg"
+  },
+  "baths": {
+    "file": "photos/dougga/baths.jpg",
+    "author": "Noomen9",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thermes_de_dougga_8.jpg",
+    "title": "Thermes de dougga 8.jpg"
+  },
+  "saturn": {
+    "file": "photos/dougga/saturn.jpg",
+    "author": "Agnieszka Wolska",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Temple_of_Saturne.jpg",
+    "title": "Temple of Saturne.jpg"
+  }
+}

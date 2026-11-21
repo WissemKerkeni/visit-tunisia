@@ -1,0 +1,50 @@
+{
+  "court2": {
+    "file": "photos/ksar-ouled-soltane/court2.jpg",
+    "author": "Ovva olfa",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ksar_Ouled_Soltane_35.jpg",
+    "title": "Ksar Ouled Soltane 35.jpg"
+  },
+  "court1": {
+    "file": "photos/ksar-ouled-soltane/court1.jpg",
+    "author": "Ggeorgery",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ksar_Ouled_Soltane.jpg",
+    "title": "Ksar Ouled Soltane.jpg"
+  },
+  "ghorfa": {
+    "file": "photos/ksar-ouled-soltane/ghorfa.jpg",
+    "author": "Ovva olfa",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ksar_Ouled_Soltane_27.jpg",
+    "title": "Ksar Ouled Soltane 27.jpg"
+  },
+  "stairs": {
+    "file": "photos/ksar-ouled-soltane/stairs.jpg",
+    "author": "Skander zarrad",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ksar_Ouled_Soltane_Vue_3.jpg",
+    "title": "Ksar Ouled Soltane Vue 3.jpg"
+  },
+  "passage": {
+    "file": "photos/ksar-ouled-soltane/passage.jpg",
+    "author": "Ovva olfa",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ksar_Ouled_Soltane_38.jpg",
+    "title": "Ksar Ouled Soltane 38.jpg"
+  },
+  "outside": {
+    "file": "photos/ksar-ouled-soltane/outside.jpg",
+    "author": "Majbri wael",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tataouine._Ksar_Ouled_Soltane.jpg",
+    "title": "Tataouine. Ksar Ouled Soltane.jpg"
+  }
+}

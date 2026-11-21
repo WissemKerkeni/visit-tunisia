@@ -1,0 +1,66 @@
+{
+  "nattes": {
+    "file": "photos/sidi-bou-said/nattes.jpg",
+    "author": "Andrea Calabretta",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_des_Nattes_in_Sidi_Bou_Said.jpg",
+    "title": "Café des Nattes in Sidi Bou Said.jpg"
+  },
+  "minaret": {
+    "file": "photos/sidi-bou-said/minaret.jpg",
+    "author": "Mstyslav Chernov",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sidi_Bou_Said_mosque,_nearby_the_Rue_Habib_Thameur._Northern_Tunisia,_Mediterranean_Sea,_Northern_Africa.jpg",
+    "title": "Sidi Bou Said mosque, nearby the Rue Habib Thameur. Northern Tunisia, Mediterranean Sea, Northern Africa.jpg"
+  },
+  "door": {
+    "file": "photos/sidi-bou-said/door.jpg",
+    "author": "Zinneke",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sidi_Bou_Said_Blo_Dier.jpg",
+    "title": "Sidi Bou Said Blo Dier.jpg"
+  },
+  "lighthouse": {
+    "file": "photos/sidi-bou-said/lighthouse.jpg",
+    "author": "anagh",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vue_sur_la_M%C3%A9diterran%C3%A9_pour_un_r%C3%AAveur,_Septembre_2007_-_panoramio.jpg",
+    "title": "Vue sur la Méditerrané pour un rêveur, Septembre 2007 - panoramio.jpg"
+  },
+  "gulf": {
+    "file": "photos/sidi-bou-said/gulf.jpg",
+    "author": "Aminebz",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sidi_bou_sa%C3%AFd_,Tunisia.jpg",
+    "title": "Sidi bou saïd ,Tunisia.jpg"
+  },
+  "ennejma": {
+    "file": "photos/sidi-bou-said/ennejma.jpg",
+    "author": "Houss 2020",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Palais_Ennejma_Ezzahra_13.jpg",
+    "title": "Le Palais Ennejma Ezzahra 13.jpg"
+  },
+  "marina": {
+    "file": "photos/sidi-bou-said/marina.jpg",
+    "author": "Ghiyaal",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Port_of_Sidi_Bou_Said,_Tunis,_Tunisia,_North_Africa.jpg",
+    "title": "Port of Sidi Bou Said, Tunis, Tunisia, North Africa.jpg"
+  },
+  "cliff": {
+    "file": "photos/sidi-bou-said/cliff.jpg",
+    "author": "Elycoupo²",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sidi_Bou_Said_Cliff.jpg",
+    "title": "Sidi Bou Said Cliff.jpg"
+  }
+}

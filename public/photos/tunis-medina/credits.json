@@ -1,0 +1,66 @@
+{
+  "zitouna": {
+    "file": "photos/tunis-medina/zitouna.jpg",
+    "author": "Skander zarrad",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosquee_Zitouna_-_Tunis.jpg",
+    "title": "Mosquee Zitouna - Tunis.jpg"
+  },
+  "attarine": {
+    "file": "photos/tunis-medina/attarine.jpg",
+    "author": "Selma Jmii",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Etalages_dans_la_M%C3%A9dina.JPG",
+    "title": "Etalages dans la Médina.JPG"
+  },
+  "kasbah": {
+    "file": "photos/tunis-medina/kasbah.jpg",
+    "author": "Noomen9",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_de_la_kasbah_11.jpg",
+    "title": "Mosquée de la kasbah 11.jpg"
+  },
+  "youssefdey": {
+    "file": "photos/tunis-medina/youssefdey.jpg",
+    "author": "Cheima fezzani",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_youssef_dey.jpg",
+    "title": "Mosquée youssef dey.jpg"
+  },
+  "hammouda": {
+    "file": "photos/tunis-medina/hammouda.jpg",
+    "author": "Noomen9",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_Hammouda-Pacha_2.JPG",
+    "title": "Mosquée Hammouda-Pacha 2.JPG"
+  },
+  "mahrez": {
+    "file": "photos/tunis-medina/mahrez.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_de_Mohammed_Bey_11.jpg",
+    "title": "Mosquée de Mohammed Bey 11.jpg"
+  },
+  "tourbet": {
+    "file": "photos/tunis-medina/tourbet.jpg",
+    "author": "Noomen9",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tourbet_el_bey_13.jpg",
+    "title": "Tourbet el bey 13.jpg"
+  },
+  "babbhar": {
+    "file": "photos/tunis-medina/babbhar.jpg",
+    "author": "IssamBarhoumi",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bab_Bhar.JPG",
+    "title": "Bab Bhar.JPG"
+  }
+}

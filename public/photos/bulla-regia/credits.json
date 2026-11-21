@@ -1,0 +1,50 @@
+{
+  "hunt": {
+    "file": "photos/bulla-regia/hunt.jpg",
+    "author": "Noomen9",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Maison_de_la_chasse_16.jpg",
+    "title": "Maison de la chasse 16.jpg"
+  },
+  "amphitrite": {
+    "file": "photos/bulla-regia/amphitrite.jpg",
+    "author": "Carole Raddato from FRANKFURT, Germany",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:In_situ_mosaic_depicting_Venus_being_carried_ashore_by_a_pair_of_Ichthyocentaurs_(fish-tailed_centaurs)_following_her_birth_from_the_sea_foam,_House_of_Amphitrite,_Bulla_Regia_(54423826788).jpg",
+    "title": "In situ mosaic depicting Venus being carried ashore by a pair of Ichthyocentaurs (fish-tailed centaurs) following her birth from the sea foam, House of Amphitrite, Bulla Regia (54423826788).jpg"
+  },
+  "fishing": {
+    "file": "photos/bulla-regia/fishing.jpg",
+    "author": "Verity Cridland",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunisia_Bulla_regia_(13603095713).jpg",
+    "title": "Tunisia Bulla regia (13603095713).jpg"
+  },
+  "theatre": {
+    "file": "photos/bulla-regia/theatre.jpg",
+    "author": "Elena Tatiana Chis",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Roman_Theatre_view_from_above_-_ruin_of_Bulla_Regia.jpg",
+    "title": "Roman Theatre view from above - ruin of Bulla Regia.jpg"
+  },
+  "forum": {
+    "file": "photos/bulla-regia/forum.jpg",
+    "author": "Verity Cridland",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunisia_Bulla_regia_(13603804044).jpg",
+    "title": "Tunisia Bulla regia (13603804044).jpg"
+  },
+  "baths": {
+    "file": "photos/bulla-regia/baths.jpg",
+    "author": "Bibimamia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aper%C3%A7u_des_thermes_de_Julia_Memmia_du_site_de_Bulla_Regia.JPG",
+    "title": "Aperçu des thermes de Julia Memmia du site de Bulla Regia.JPG"
+  }
+}
