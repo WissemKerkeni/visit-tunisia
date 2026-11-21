@@ -23,6 +23,7 @@ import { eventMonths, eventsNear, eventsView, foodView, guideView, photo as phot
 import { icon } from './icons';
 import { planState, planView } from './plan-view';
 import { reveal } from './reveal';
+import { trackView } from '../analytics';
 import { ITINERARIES, VISITS } from '../content/guide';
 import { h } from './dom';
 
@@ -112,7 +113,10 @@ const addDays = (iso: string, n: number) => { const d = new Date(`${iso}T12:00:0
 export function mountLanding(root: HTMLElement, openSite: (id: string) => void, startPlace?: string) {
   if (startPlace) state.active = startPlace;
   const h0 = location.hash.replace(/^#\/?/, '');
-  state.view = (VIEWS as string[]).includes(h0) ? h0 as View : h0 === 'itineraries' ? 'plan' : 'explore';
+  // the address picks the view (#/plan), or a page of a view written by scripts/make-pages.mjs (/en/plan/)
+  const pageView = (window as { __VIEW__?: string }).__VIEW__;
+  const want = h0 || (pageView ?? '');
+  state.view = (VIEWS as string[]).includes(want) ? want as View : want === 'itineraries' ? 'plan' : 'explore';
   if (/^trip\//.test(h0)) planState.sel = 'mine';
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let firstRender = true;
@@ -553,6 +557,7 @@ export function mountLanding(root: HTMLElement, openSite: (id: string) => void, 
         botTabs.forEach((a, i) => a.classList.toggle('on', VIEWS[i] === v));
         document.title = v === 'explore' ? `${t('brand')}: ${t('heroTitle')}` : `${NAV[v][0]} · ${t('brand')}`;
         card.classList.toggle('hide', v !== 'explore');
+        trackView(v === 'explore' ? (firstRender ? location.pathname : `/${lang()}/`) : `/${lang()}/${v}/`);
         if (v === 'explore') map.layout();
         moveInd();
         stopReveal(); stopReveal = reveal(viewEls[v]);
@@ -595,7 +600,7 @@ export function mountLanding(root: HTMLElement, openSite: (id: string) => void, 
       h('a', { class: 'scroll-cue', href: '#/places' }, t('scrollCue'), h('span', { class: 'chev' })),
     );
     const topbar = h('header', { class: 'otop' },
-      h('a', { class: 'logo', href: '#/', onclick: (e) => { e.preventDefault(); navTo('explore'); toMap(); } }, t('brand')), searchBox,
+      h('a', { class: 'logo', href: '#/', onclick: (e) => { e.preventDefault(); navTo('explore'); toMap(); } }, h('img', { src: `${BASE}logo.svg`, alt: '', width: '32', height: '32' }), t('brand')), searchBox,
       h('nav', { class: 'ttabs', 'aria-label': t('brand') }, ind, ...topTabs), h('div', { class: 'spacer' }), langMenu());
     const bottombar = h('nav', { class: 'obot', 'aria-label': t('brand') }, ...botTabs);
 

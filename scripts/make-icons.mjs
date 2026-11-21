@@ -1,27 +1,25 @@
-// The app's icons (favicon, home-screen and install icons) drawn from one SVG: a Roman arch against the sun.
-// Usage: node scripts/make-icons.mjs  →  public/icons/*.png, public/favicon.svg
+// The site's logo and icons, from one drawing: the shape of Tunisia in terracotta with the sun beside the coast,
+// on cream. Writes public/logo.svg (the mark, also the favicon), public/favicon.svg and the PNG icons for
+// phones and installed apps (public/icons/*). Usage: node scripts/make-icons.mjs
 import fs from 'node:fs';
 import sharp from 'sharp';
 
-const art = (pad) => {
-  // pad: the share of the icon kept clear around the drawing (maskable icons are cropped to a circle)
-  const s = 1 - pad * 2, o = pad * 512;
-  return `<g transform="translate(${o} ${o}) scale(${s})">
-    <circle cx="256" cy="214" r="112" fill="#f3c77a"/>
-    <path d="M96 420V250q0-28 28-28h264q28 0 28 28v170h-78V300a62 62 0 0 0-124 0v120Z" fill="#fff8ec"/>
-    <path d="M96 222h320v-24H96Z" fill="#fff8ec"/>
-    <path d="M64 420h384v34H64Z" fill="#fff8ec"/>
-  </g>`;
-};
-const svg = (pad, round) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d46538"/><stop offset="1" stop-color="#a8431f"/></linearGradient></defs>
-  <rect width="512" height="512" rx="${round}" fill="url(#g)"/>${art(pad)}</svg>`;
+const src = fs.readFileSync('src/content/tunisia-map.ts', 'utf8');
+const outline = src.match(/TUNISIA_PATH = '([^Z]*Z)/)[1];   // the mainland only (no islands at this size)
+const CREAM = '#fff8ec', TERRA = '#d46538', OCHRE = '#d99b43';
 
+/** The drawing in a 64-unit box; k shrinks it around the centre (maskable icons are cropped to a circle). */
+const art = (k = 1) => `<g transform="translate(32 32) scale(${k}) translate(-32 -32)">
+    <circle cx="53" cy="14" r="6.5" fill="${OCHRE}"/>
+    <g transform="translate(19 4.2) scale(0.0735)"><path d="${outline}" fill="${TERRA}"/></g>
+  </g>`;
+const svg = (rx, k) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="${rx}" fill="${CREAM}"/>${art(k)}</svg>`;
+
+fs.writeFileSync('public/logo.svg', svg(15, 1));
+fs.writeFileSync('public/favicon.svg', svg(15, 1));
 fs.mkdirSync('public/icons', { recursive: true });
-fs.writeFileSync('public/favicon.svg', svg(0.08, 112));
-const out = [
-  ['icon-192.png', 192, svg(0.08, 96)], ['icon-512.png', 512, svg(0.08, 96)],
-  ['maskable-512.png', 512, svg(0.18, 0)], ['apple-touch-icon.png', 180, svg(0.1, 0)],
-];
-for (const [name, size, s] of out) await sharp(Buffer.from(s)).resize(size, size).png().toFile(`public/icons/${name}`);
-console.log('icons written');
+for (const [name, size, s] of [
+  ['icon-192.png', 192, svg(14, 0.92)], ['icon-512.png', 512, svg(14, 0.92)],
+  ['maskable-512.png', 512, svg(0, 0.7)], ['apple-touch-icon.png', 180, svg(0, 0.82)],
+]) await sharp(Buffer.from(s), { density: 600 }).resize(size, size).png().toFile(`public/icons/${name}`);
+console.log('logo and icons written');

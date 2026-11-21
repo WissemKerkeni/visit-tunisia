@@ -1,3 +1,4 @@
+import { trackView } from './analytics';
 import { initLang } from './i18n';
 import { goView, mountLanding } from './ui/landing';
 import type { SiteDef } from './sites/types';
@@ -39,6 +40,7 @@ async function route() {
   if (loader) {
     const [{ mountSite }, { site }] = await Promise.all([import('./ui/siteUI'), loader()]);
     if (id !== routeId) return;
+    trackView(`/3d/${hash}/`);
     const cleanup = await mountSite(root, site, () => { location.hash = ''; });
     if (id !== routeId) { cleanup(); return; }
     unmount = cleanup;

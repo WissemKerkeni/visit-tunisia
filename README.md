@@ -50,6 +50,15 @@ Animations: views cross-fade (View Transitions where the browser has them), card
 
 `npm run build` also writes a page for every place in every language (`dist/<lang>/<place>/index.html`, 648 pages, by `scripts/make-pages.mjs`) and a home page per language. Each has its own title, description, share preview (Open Graph), links to its other languages (hreflang), structured data (schema.org `TouristAttraction`) and the place's text, facts, hours and tickets as plain HTML for search engines and visitors without JavaScript; the map then opens on that place. Set `VITE_SITE_URL` to add canonical links, absolute share images, `sitemap.xml` and `robots.txt`.
 
+## Deploying, analytics and search engines
+
+- **Vercel:** `vercel.json` builds with `npm run build` into `dist/`, keeps trailing slashes (the place pages are folders), caches the built files for a year and never caches `sw.js`. Import the GitHub repository in Vercel (every push then deploys), or run `npx vercel --prod` from this folder.
+- **Analytics:** Vercel Web Analytics (`src/analytics.ts`, cookie-free, no personal data), on the deployed site only; turn it on in the project's Analytics tab. The views of the home page (`/en/plan/`…) and the 3D monuments (`/3d/el-jem/`) count as pages.
+- **Search engines:** every place and every view of the guide (`/<lang>/plan/`, `guide/`, `events/`, `food/`) is a page of its own in 12 languages, with its text in plain HTML, `hreflang` links, a canonical address and schema.org data (WebSite, TouristDestination, TouristAttraction, TouristTrip, Festival, BreadcrumbList). `sitemap.xml` lists every page with its language versions; the share image is `public/og.jpg` (`node scripts/make-og.mjs`). On Vercel the site's address comes from its production domain; set `VITE_SITE_URL` for your own domain.
+- **AI search (GEO):** `robots.txt` lets every crawler in, `llms.txt` describes the site and links its main pages, and `llms-full.txt` holds the whole guide (places, itineraries, practical advice, festivals, food, phrases) as plain text with its sources.
+- **Google Search Console:** add the site as a URL-prefix property, choose the HTML tag method, put its code in `GSC_VERIFICATION` (Vercel: Settings → Environment Variables) and redeploy; the tag is then on every page. Submit `sitemap.xml`.
+- **Logo:** the shape of Tunisia with the sun beside the coast (`public/logo.svg`); `node scripts/make-icons.mjs` redraws it and every icon.
+
 ## Settings
 
 Copy `.env.example` to `.env.local` and fill in what you have:

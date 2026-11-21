@@ -941,3 +941,9 @@ html[lang='ar'] .pstats dt { letter-spacing: 0; }
 }
 .vevents .gevent h3, .vfood .gdish h3 { font: 500 25px/1.2 var(--serif); margin: 6px 0 4px; color: var(--o-white); }
 .vfood .gdish h3 .gar { font-size: 21px; }
+
+/* the logo next to the name in the top bar */
+.otop .logo { display: inline-flex; align-items: center; gap: 10px; }
+.otop .logo img { width: 32px; height: 32px; border-radius: 8px; flex: none; }
+@media (max-width: 1079px) { .otop .logo img { width: 28px; height: 28px; } .otop .logo { gap: 8px; } }
+@media (max-width: 420px) { .otop .logo { font-size: 0; gap: 0; } }

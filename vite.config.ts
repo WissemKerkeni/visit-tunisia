@@ -26,8 +26,13 @@ function snapshots(): Plugin {
   };
 }
 
+// on Vercel, the site's address defaults to its production domain (VITE_SITE_URL wins when set)
+const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+const siteUrl = process.env.VITE_SITE_URL || (vercelHost ? `https://${vercelHost}` : '');
+
 export default defineConfig({
   base: './',
+  define: siteUrl ? { 'import.meta.env.VITE_SITE_URL': JSON.stringify(siteUrl) } : {},
   server: { port: 5173 },
   build: { target: 'es2022', chunkSizeWarningLimit: 1200 },
   plugins: [snapshots()],
