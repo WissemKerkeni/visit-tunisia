@@ -34,7 +34,7 @@ async function loadDict(l: Lang) {
 }
 
 const UI = {
-  brand: { en: 'Visit Tunisia', fr: 'Visit Tunisia', ar: 'زوروا تونس' },
+  brand: { en: 'Discover Tunisia', fr: 'Discover Tunisia', ar: 'اكتشف تونس' },
   heroTitle: {
     en: 'All of Tunisia on one living map',
     fr: 'Toute la Tunisie sur une carte vivante',

@@ -1,6 +1,6 @@
 {
-  "name": "Visit Tunisia",
-  "short_name": "Visit Tunisia",
+  "name": "Discover Tunisia",
+  "short_name": "Discover Tunisia",
   "description": "A living map of Tunisia: places, weather, festivals, itineraries, a travel guide and monuments in 3D.",
   "start_url": "./",
   "scope": "./",

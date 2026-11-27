@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const UA = { 'User-Agent': 'VisitTunisia/0.1 (texture credits kept)' };
+const UA = { 'User-Agent': 'DiscoverTunisia/0.1 (texture credits kept)' };
 const dst = path.join('public', 'textures');
 const creditsFile = path.join(dst, 'credits.json');
 const credits = JSON.parse(fs.readFileSync(creditsFile, 'utf8'));

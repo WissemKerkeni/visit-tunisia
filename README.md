@@ -1,4 +1,4 @@
-# Visit Tunisia
+# Discover Tunisia
 
 A living map of Tunisia in the browser: beaches, oases, Roman cities, wildlife and transport, with a trip planner, and twelve monuments you can walk through in 3D. The first monument built was the **Amphitheatre of El Jem**, in code, to its real dimensions (148 × 122 m, 36 m high, arena 64 × 39 m). The site was called "Walk Tunisia" until the map grew beyond the monuments.
 
@@ -56,7 +56,8 @@ Animations: views cross-fade (View Transitions where the browser has them), card
 - **Analytics:** Vercel Web Analytics (`src/analytics.ts`, cookie-free, no personal data), on the deployed site only; turn it on in the project's Analytics tab. The views of the home page (`/en/plan/`…) and the 3D monuments (`/3d/el-jem/`) count as pages.
 - **Search engines:** every place and every view of the guide (`/<lang>/plan/`, `guide/`, `events/`, `food/`) is a page of its own in 12 languages, with its text in plain HTML, `hreflang` links, a canonical address and schema.org data (WebSite, TouristDestination, TouristAttraction, TouristTrip, Festival, BreadcrumbList). `sitemap.xml` lists every page with its language versions; the share image is `public/og.jpg` (`node scripts/make-og.mjs`). On Vercel the site's address comes from its production domain; set `VITE_SITE_URL` for your own domain.
 - **AI search (GEO):** `robots.txt` lets every crawler in, `llms.txt` describes the site and links its main pages, and `llms-full.txt` holds the whole guide (places, itineraries, practical advice, festivals, food, phrases) as plain text with its sources.
-- **Google Search Console:** the property `https://visit-tunisia-blond.vercel.app/` is verified by the file `public/google36c27a4defd6916f.html` (keep it, or Google drops the verification); `sitemap.xml` is submitted there. For another address, add a URL-prefix property and either add its HTML file to `public/` or put the code of its HTML tag in `GSC_VERIFICATION` (Vercel: Settings → Environment Variables) and redeploy.
+- **Domain:** the site lives at `https://discover-tunisia.com`. Add the domain in the Vercel project (Settings → Domains) and point its DNS there; Vercel then makes it the production domain, and the next build takes its address from `VERCEL_PROJECT_PRODUCTION_URL` (canonical links, `hreflang`, sitemap, share previews). `VITE_SITE_URL` overrides it. The old `visit-tunisia-blond.vercel.app` address should redirect to the domain (Vercel: Settings → Domains → Redirect).
+- **Google Search Console:** the old property `https://visit-tunisia-blond.vercel.app/` is verified by the file `public/google36c27a4defd6916f.html` (keep it while the move is reported). For `discover-tunisia.com`, add a Domain property (verified by a DNS TXT record) or a URL-prefix property (an HTML file in `public/`, or its tag code in `GSC_VERIFICATION`), submit `sitemap.xml`, then use Change of Address in the old property.
 - **Logo:** the shape of Tunisia with the sun beside the coast (`public/logo.svg`); `node scripts/make-icons.mjs` redraws it and every icon.
 
 ## Settings

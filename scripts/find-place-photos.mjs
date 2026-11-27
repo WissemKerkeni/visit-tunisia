@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import sharp from 'sharp';
 
 const DIR = 'references/places';
-const UA = { 'User-Agent': 'VisitTunisia/0.1 (travel education site; photo credits kept)' };
+const UA = { 'User-Agent': 'DiscoverTunisia/0.1 (travel education site; photo credits kept)' };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const FREE = /^(CC0|Public domain|PD|CC BY(-SA)? [1-4]\.0)/i;
 const strip = (s = '') => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();

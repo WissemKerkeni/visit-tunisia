@@ -9,7 +9,7 @@ import sharp from 'sharp';
 const OUT = process.argv[2] || 'references/sites/candidates';
 fs.mkdirSync(OUT, { recursive: true });
 const API = 'https://commons.wikimedia.org/w/api.php';
-const UA = { 'User-Agent': 'VisitTunisia/0.1 (heritage education site; photo credits kept)' };
+const UA = { 'User-Agent': 'DiscoverTunisia/0.1 (heritage education site; photo credits kept)' };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const [, , , onlySite, ...custom] = process.argv;

@@ -12,7 +12,7 @@ const SUB = process.argv[3] || 'sites';
 const OUT = `public/photos/${SUB}`;
 fs.mkdirSync(OUT, { recursive: true });
 sharp.cache(false);
-const UA = { 'User-Agent': 'VisitTunisia/0.1 (heritage education site; photo credits kept)' };
+const UA = { 'User-Agent': 'DiscoverTunisia/0.1 (heritage education site; photo credits kept)' };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const creditsFile = path.join(OUT, 'credits.json');
 const credits = fs.existsSync(creditsFile) ? JSON.parse(fs.readFileSync(creditsFile, 'utf8')) : {};

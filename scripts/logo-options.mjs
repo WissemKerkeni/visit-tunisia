@@ -45,7 +45,7 @@ export const MARKS = {
 const NAMES = { bab: 'A · Bab (gate on the sea)', pin: 'B · Pin with an arch', star: 'C · Najma (tile star)', map: 'D · The shape of Tunisia' };
 const svgs = Object.entries(MARKS).map(([id, s]) => `<section><h2>${NAMES[id]}</h2>
   <div class="row"><div class="big">${s}</div><div class="lock"><div class="m">${s}</div><span>Visit <i>Tunisia</i></span></div></div>
-  <div class="row small"><div class="dark"><div class="m">${s}</div><span>Visit Tunisia</span></div><div class="fav">${s}${s}</div></div></section>`).join('');
+  <div class="row small"><div class="dark"><div class="m">${s}</div><span>Discover Tunisia</span></div><div class="fav">${s}${s}</div></div></section>`).join('');
 fs.mkdirSync('references/design', { recursive: true });
 fs.writeFileSync('references/design/logo-options.html', `<!doctype html><html><head><meta charset="utf-8"><title>Logo options</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">

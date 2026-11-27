@@ -15,7 +15,7 @@ const MAP_W = +src.match(/MAP_W = (\d+)/)[1], MAP_H = +src.match(/MAP_H = (\d+)/
 const [, LON0, KX, S, LAT1] = src.match(/\(lon - ([\d.]+)\) \* ([\d.]+) \* ([\d.]+), \(([\d.]+) - lat\)/).map(Number);
 const project = (lat, lon) => [(lon - LON0) * KX * S, (LAT1 - lat) * S];
 const unproject = (x, y) => [LAT1 - y / S, LON0 + x / (KX * S)];
-const UA = { 'User-Agent': 'visit-tunisia-dev/0.1' };
+const UA = { 'User-Agent': 'discover-tunisia-dev/0.1' };
 const DIR = 'references/atlas';
 fs.mkdirSync(DIR, { recursive: true });
 fs.mkdirSync('public/atlas', { recursive: true });

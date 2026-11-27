@@ -130,7 +130,7 @@ Sensitivity notes: Kairouan is an active mosque (show it respectfully, no game e
 **Engagement**
 - **Digital passport**: collect a stamp for each monument visited; share the passport card on social media.
 - **Treasure hunt**: find 5 hidden details per site (a carved symbol, a specific mosaic animal). Good for schools.
-- **Photo mode**: freeze, frame, filters, then share with a "Visit Tunisia" watermark and link back.
+- **Photo mode**: freeze, frame, filters, then share with a "Discover Tunisia" watermark and link back.
 - **Postcard generator**: turn your photo-mode shot into a postcard to send to a friend.
 
 **Smart features**

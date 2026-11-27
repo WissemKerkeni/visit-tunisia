@@ -9,7 +9,7 @@ const photo = await sharp('public/photos/el-jem/p22.jpg').resize(W, H, { fit: 'c
 const shade = Buffer.from(`<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
   <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b1923" stop-opacity=".92"/><stop offset=".62" stop-color="#0b1923" stop-opacity=".55"/><stop offset="1" stop-color="#0b1923" stop-opacity=".05"/></linearGradient></defs>
   <rect width="${W}" height="${H}" fill="url(#g)"/>
-  <text x="80" y="330" font-family="Georgia, 'Times New Roman', serif" font-size="92" fill="#f7f3ee">Visit Tunisia</text>
+  <text x="80" y="330" font-family="Georgia, 'Times New Roman', serif" font-size="92" fill="#f7f3ee">Discover Tunisia</text>
   <text x="84" y="398" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#e9d7bb">A living map, festivals, itineraries</text>
   <text x="84" y="444" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#e9d7bb">and monuments to walk in 3D</text>
   <rect x="84" y="488" width="120" height="6" rx="3" fill="#d46538"/>

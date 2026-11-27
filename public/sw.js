@@ -1,7 +1,7 @@
-// Visit Tunisia works offline once visited: pages come from the network when there is one (so updates arrive) and
+// Discover Tunisia works offline once visited: pages come from the network when there is one (so updates arrive) and
 // from the cache otherwise; scripts, styles, photos, map and 3D data come from the cache first. Live weather and
 // exchange rates are never cached here (the page shows the climate averages instead).
-const VERSION = 'v3';
+const VERSION = 'v4';
 const PAGES = `pages-${VERSION}`, FILES = `files-${VERSION}`;
 const ROOT = new URL('./', self.location).href;
 

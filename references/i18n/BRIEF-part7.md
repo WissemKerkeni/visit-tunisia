@@ -1,6 +1,6 @@
-# Translating part 7 of Visit Tunisia
+# Translating part 7 of Discover Tunisia
 
-Visit Tunisia is a travel website: a living map of Tunisia with places, weather, festivals, itineraries, a practical
+Discover Tunisia is a travel website: a living map of Tunisia with places, weather, festivals, itineraries, a practical
 "before you go" guide, food, a few Tunisian Arabic phrases, and monuments to walk in 3D.
 
 ## Input

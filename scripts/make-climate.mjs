@@ -4,7 +4,7 @@
 // Usage: node scripts/make-climate.mjs   → src/content/climate.ts
 import fs from 'node:fs';
 
-const UA = { 'User-Agent': 'visit-tunisia-dev/0.1' };
+const UA = { 'User-Agent': 'discover-tunisia-dev/0.1' };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const Y0 = 2015, Y1 = 2024;
 // id, names, town, and a point a few km offshore for the sea temperature (null inland)

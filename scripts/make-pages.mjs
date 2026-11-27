@@ -58,11 +58,11 @@ const CAT = { historic: 'catHistoric', beach: 'catBeach', nature: 'catNature', s
 const fmtH = (h, l) => { const m = Math.max(15, Math.round((h * 60) / 15) * 15); return m < 60 ? `${m} min` : ui('hoursShort', l).replace('{h}', String(Math.floor(m / 60))) + (m % 60 ? ` ${m % 60}` : ''); };
 
 // structured data shared by every page: the site and who publishes it
-const WEBSITE = SITE ? { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'Visit Tunisia', url: `${SITE}/`, inLanguage: LANGS,
-  publisher: { '@type': 'Organization', name: 'Visit Tunisia', url: `${SITE}/`, logo: `${SITE}/icons/icon-512.png` },
+const WEBSITE = SITE ? { '@type': 'WebSite', '@id': `${SITE}/#website`, name: 'Discover Tunisia', url: `${SITE}/`, inLanguage: LANGS,
+  publisher: { '@type': 'Organization', name: 'Discover Tunisia', url: `${SITE}/`, logo: `${SITE}/icons/icon-512.png` },
   creator: { '@type': 'Organization', name: 'Storeware TN', url: 'https://storeware.tn/' }, copyrightYear: 2026 } : null;
 /** The footer of every plain-HTML page: copyright and who made the site. */
-const foot = (l) => `<footer><p>© 2026 Visit Tunisia · ${esc(ui('madeBy', l)).replace('{name}', '<a href="https://storeware.tn/">Storeware TN</a>')}</p></footer>`;
+const foot = (l) => `<footer><p>© 2026 Discover Tunisia · ${esc(ui('madeBy', l)).replace('{name}', '<a href="https://storeware.tn/">Storeware TN</a>')}</p></footer>`;
 const TUNISIA = { '@type': 'Country', name: 'Tunisia', identifier: 'TN' };
 const crumbs = (l, list) => (SITE ? { '@type': 'BreadcrumbList', itemListElement: list.map(([name, rel], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(rel) })) } : null);
 const graph = (...nodes) => ({ '@context': 'https://schema.org', '@graph': [WEBSITE, ...nodes].filter(Boolean) });
@@ -76,7 +76,7 @@ function page({ l, depth, title, desc, image, url, alternates, jsonld, body, ext
     GSC ? `<meta name="google-site-verification" content="${esc(GSC)}">` : '',
     url ? `<link rel="canonical" href="${url}">` : '',
     ...alternates.map(([hl, href]) => `<link rel="alternate" hreflang="${hl}" href="${href}">`),
-    `<meta property="og:type" content="website">`, `<meta property="og:site_name" content="Visit Tunisia">`,
+    `<meta property="og:type" content="website">`, `<meta property="og:site_name" content="Discover Tunisia">`,
     `<meta property="og:title" content="${esc(title)}">`, `<meta property="og:description" content="${esc(desc)}">`,
     `<meta property="og:locale" content="${l === 'zh' ? 'zh_CN' : l}">`,
     url ? `<meta property="og:url" content="${url}">` : '',
@@ -122,8 +122,8 @@ for (const it of items) for (const l of LANGS) {
     ...(SITE ? { url: abs(rel), image: abs(it.photo) } : {}), ...(it.unesco ? { award: 'UNESCO World Heritage' } : {}),
     ...(v?.price && /free/i.test(v.price.en) ? { isAccessibleForFree: true } : {}) };
   write(path.join(rel, 'index.html'), page({
-    l, depth: 2, title: `${name} · Visit Tunisia`, desc: short(text), image: abs(it.photo), url: abs(rel), body,
-    jsonld: graph(place, crumbs(l, [['Visit Tunisia', `${l}/`], [name, rel]])),
+    l, depth: 2, title: `${name} · Discover Tunisia`, desc: short(text), image: abs(it.photo), url: abs(rel), body,
+    jsonld: graph(place, crumbs(l, [['Discover Tunisia', `${l}/`], [name, rel]])),
     alternates: alts((x) => `${x}/${it.id}/`), extra: `window.__PLACE__=${JSON.stringify(it.id)};`,
   }));
   if (l === 'en') pages.push((x) => `${x}/${it.id}/`);
@@ -148,13 +148,13 @@ for (const [view, make] of Object.entries(VIEWS)) {
     const v = make(l), rel = `${l}/${view}/`;
     const jsonld = graph(
       { '@type': view === 'events' ? 'CollectionPage' : 'WebPage', name: v.title, description: v.lead, inLanguage: l, about: TUNISIA, ...(SITE ? { url: abs(rel), isPartOf: { '@id': `${SITE}/#website` } } : {}) },
-      crumbs(l, [['Visit Tunisia', `${l}/`], [v.title, rel]]),
+      crumbs(l, [['Discover Tunisia', `${l}/`], [v.title, rel]]),
       ...(view === 'events' ? D.EVENTS.map((e) => ({ '@type': 'Festival', name: tr(e.name, l), description: tr(e.text, l), location: { '@type': 'Place', name: e.town, address: { '@type': 'PostalAddress', addressLocality: e.town, addressCountry: 'TN' } }, ...(SITE ? { url: abs(rel) } : {}) })) : []),
       ...(view === 'plan' ? D.ITINERARIES.map((it) => ({ '@type': 'TouristTrip', name: tr(it.name, l), description: tr(it.text, l), touristType: 'Leisure',
         itinerary: { '@type': 'ItemList', itemListElement: [...new Set(it.plan.flatMap((d) => d.stops))].map((s, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'TouristAttraction', name: tr(byId.get(s)?.name ?? { en: s }, l), ...(SITE ? { url: abs(`${l}/${s}/`) } : {}) } })) } })) : []),
     );
     write(path.join(rel, 'index.html'), page({
-      l, depth: 2, title: `${v.title} · Visit Tunisia`, desc: short(v.lead), image: abs(OG), url: abs(rel), jsonld,
+      l, depth: 2, title: `${v.title} · Discover Tunisia`, desc: short(v.lead), image: abs(OG), url: abs(rel), jsonld,
       body: `<article>${nav(l)}<h1>${esc(v.title)}</h1><p>${esc(v.lead)}</p>${v.body}</article>`,
       alternates: alts((x) => `${x}/${view}/`), extra: `window.__VIEW__=${JSON.stringify(view)};`,
     }));
@@ -179,8 +179,8 @@ pages.unshift((x) => `${x}/`);
   // the root page keeps detecting the visitor's language; it gets the English preview and links to every language
   const rootHead = [
     GSC ? `<meta name="google-site-verification" content="${esc(GSC)}">` : '',
-    `<meta property="og:title" content="${esc(`Visit Tunisia: ${D.UI_TEXTS.heroTitle.en}`)}">`, `<meta property="og:description" content="${esc(short(D.UI_TEXTS.heroText.en))}">`,
-    `<meta property="og:type" content="website">`, `<meta property="og:site_name" content="Visit Tunisia">`, `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta property="og:title" content="${esc(`Discover Tunisia: ${D.UI_TEXTS.heroTitle.en}`)}">`, `<meta property="og:description" content="${esc(short(D.UI_TEXTS.heroText.en))}">`,
+    `<meta property="og:type" content="website">`, `<meta property="og:site_name" content="Discover Tunisia">`, `<meta name="twitter:card" content="summary_large_image">`,
     SITE ? `<meta property="og:image" content="${abs(OG)}">` : '', SITE ? `<meta property="og:url" content="${SITE}/">` : '', SITE ? `<link rel="canonical" href="${SITE}/">` : '',
     ...(SITE ? [...LANGS.map((x) => `<link rel="alternate" hreflang="${x}" href="${abs(`${x}/`)}">`), `<link rel="alternate" hreflang="x-default" href="${SITE}/">`] : []),
     WEBSITE ? `<script type="application/ld+json">${JSON.stringify(graph()).replace(/</g, '\\u003c')}</script>` : '',
@@ -200,7 +200,7 @@ if (SITE) {
 }
 // llms.txt (https://llmstxt.org): what the site is and where its content lives; llms-full.txt: the guide itself
 const en = 'en';
-fs.writeFileSync(path.join(DIST, 'llms.txt'), `# Visit Tunisia
+fs.writeFileSync(path.join(DIST, 'llms.txt'), `# Discover Tunisia
 
 > A free, independent travel guide to Tunisia: a living map of ${items.length} places (heritage, beaches, nature, the Sahara and its oases), ${D.SITES.length} monuments to walk through in 3D, weather and climate, festivals by month, ready-made itineraries, practical advice and Tunisian food, in ${LANGS.length} languages. Facts are checked against the sources each page lists.
 
@@ -219,7 +219,7 @@ ${items.map((it) => `- [${it.name.en}](${link(`en/${it.id}/`)}): ${describe(it, 
 - Other languages: ${LANGS.filter((l) => l !== 'en').map((l) => `[${l}](${link(`${l}/`)})`).join(', ')}
 `);
 const visitLine = (id) => { const v = D.VISITS[id]; if (!v) return ''; return [v.hours && `Hours: ${v.hours.en}.`, v.price && `Ticket: ${v.price.en}.`, v.closed && `Closed: ${v.closed.en}.`, `(checked ${v.year})`].filter(Boolean).join(' '); };
-fs.writeFileSync(path.join(DIST, 'llms-full.txt'), `# Visit Tunisia: the travel guide in plain text
+fs.writeFileSync(path.join(DIST, 'llms-full.txt'), `# Discover Tunisia: the travel guide in plain text
 
 ${D.UI_TEXTS.heroText.en}
 
