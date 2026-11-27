@@ -5,7 +5,7 @@
 //   opens on that place or view;
 // - sitemap.xml (with every language version of each page), robots.txt, llms.txt and llms-full.txt (the guide as
 //   plain text for AI search engines), and the Google Search Console verification tag.
-// The site's address comes from VITE_SITE_URL (.env.local), or on Vercel from its production domain.
+// The site's address is https://discover-tunisia.com, unless VITE_SITE_URL (.env.local) says otherwise.
 // Usage (run by `npm run build`): node scripts/make-pages.mjs
 import fs from 'node:fs';
 import path from 'node:path';
@@ -23,8 +23,7 @@ for (const f of ['.env', '.env.local', '.env.production', '.env.production.local
   for (const line of fs.readFileSync(f, 'utf8').split(/\r?\n/)) { const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/); if (m) env[m[1]] = m[2].replace(/^["']|["']$/g, ''); }
 }
 const get = (k) => process.env[k] ?? env[k] ?? '';
-const vercelHost = get('VERCEL_PROJECT_PRODUCTION_URL');
-const SITE = (get('VITE_SITE_URL') || (vercelHost ? `https://${vercelHost}` : '')).replace(/\/$/, '');
+const SITE = (get('VITE_SITE_URL') || 'https://discover-tunisia.com').replace(/\/$/, '');
 const GSC = get('GSC_VERIFICATION') || get('VITE_GSC_VERIFICATION');
 const DIST = 'dist';
 const template = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');

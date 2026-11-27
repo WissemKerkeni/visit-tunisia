@@ -26,9 +26,8 @@ function snapshots(): Plugin {
   };
 }
 
-// on Vercel, the site's address defaults to its production domain (VITE_SITE_URL wins when set)
-const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-const siteUrl = process.env.VITE_SITE_URL || (vercelHost ? `https://${vercelHost}` : '');
+// the site's address: its domain, unless VITE_SITE_URL says otherwise
+const siteUrl = (process.env.VITE_SITE_URL || 'https://discover-tunisia.com').replace(/\/$/, '');
 
 export default defineConfig({
   base: './',
